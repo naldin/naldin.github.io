@@ -1,0 +1,61 @@
+BODY {
+	LINE-HEIGHT: 125%; FONT-FAMILY: "Verdana"
+}
+P {
+	MARGIN-TOP: 0.2em; MARGIN-BOTTOM: 0.2em; TEXT-INDENT: 1em
+}
+A.menu {
+	COLOR: black; TEXT-DECORATION: none
+}
+A.caption {
+	COLOR: white; TEXT-DECORATION: none
+}
+DIV.reply {
+	MARGIN-LEFT: 10%; MARGIN-RIGHT: -11px
+}
+INPUT {
+	BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; FONT-SIZE: 90%; BORDER-LEFT: gray 1px solid; BORDER-BOTTOM: gray 1px solid; FONT-FAMILY: "Verdana"; BACKGROUND-COLOR: #ffffff
+}
+TEXTAREA {
+	BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; FONT-SIZE: 90%; BORDER-LEFT: gray 1px solid; BORDER-BOTTOM: gray 1px solid; FONT-FAMILY: "Verdana"; BACKGROUND-COLOR: #ffffff
+}
+INPUT.buttom {
+	BACKGROUND-COLOR: #d4d0c8
+}
+DIV.pain {
+	BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 90%; PADDING-BOTTOM: 10px; VERTICAL-ALIGN: baseline; BORDER-LEFT: gray 1px solid; WIDTH: 100%; COLOR: black; LINE-HEIGHT: 120%; PADDING-TOP: 10px; BORDER-BOTTOM: gray 1px solid; FONT-FAMILY: "Verdana"; BACKGROUND-COLOR: #e8e8e8
+}
+DIV.pain2 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+TD.pain {
+	FONT-SIZE: 90%; VERTICAL-ALIGN: baseline; COLOR: black; LINE-HEIGHT: 120%; FONT-FAMILY: "Verdana"
+}
+H1 {
+	BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: gray 1px solid; PADDING-LEFT: 10px; FONT-WEIGHT: bold; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: baseline; BORDER-LEFT: gray 1px solid; WIDTH: 100%; COLOR: black; PADDING-TOP: 5px; BORDER-BOTTOM: gray 1px solid; FONT-FAMILY: "century gothic"
+    font-size: 150%; BACKGROUND-COLOR: #e8e8e8
+}
+H2 {
+	BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: gray 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 90%; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: baseline; BORDER-LEFT: gray 1px solid; WIDTH: 100%; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: gray 1px solid; FONT-FAMILY: "Verdana"; BACKGROUND-COLOR: #c8c8c8
+}
+H2.red {
+	COLOR: red
+}
+H1 SUB {
+	FONT-WEIGHT: normal; FONT-SIZE: 80%; VERTICAL-ALIGN: baseline; TEXT-ALIGN: left
+}
+TD.menu {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 100%; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: baseline; BORDER-LEFT: gray 1px solid; WIDTH: 10%; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: gray 1px solid; FONT-FAMILY: "Verdana"; BACKGROUND-COLOR: #c8c8c8
+}
+TD.caption {
+	COLOR: white; BACKGROUND-COLOR: gray
+}
+TD.last {
+	BORDER-RIGHT: gray 1px solid
+}
+TD.red {
+	BACKGROUND-COLOR: #c8c8ff
+}
+P.rights {
+	FONT-SIZE: 80%; TEXT-ALIGN: right
+}

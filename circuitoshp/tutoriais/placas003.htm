@@ -1,0 +1,440 @@
+<html>
+
+
+
+<head>
+
+<title>placas003</title>
+
+</head>
+
+
+
+<body bgcolor="#000000" text="#00FFFF" link="#00FFFF" vlink="#C0C0C0">
+
+
+
+<p><font SIZE="2">&nbsp;</p>
+
+
+
+<p ALIGN="CENTER">PLACAS COM CIRCUITOS INTEGRADOS</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O invólucro mais
+
+comum para os circuitos integrados é o DIL (Dual in Line) que consiste em uma pequena
+
+caixa plástica com duas filas de terminais paralelos (corno o próprio nome em inglês
+
+sugere).O desenho de uma placa de circuito impresso que aloje um ou mais destes integrados
+
+não é difícil, mas deve prever o correto dimensionamento do componente. A distância
+
+entre os furos para a passagem dos terminais destes integrados deve ser rigorosamente
+
+observada para que ele depois se &quot;encaixe&quot; e possa ser soldado.Se bem que, com
+
+habilidade apenas com uma caneta possamos desenhar uma placa que aloje tais integrados, o
+
+ideal é partir de algum recurso mais prático que já tenha previsto o dimensionamento
+
+dos integrados. O ideal é a utilização dos símbolos auto-adesivos ou decalques que
+
+podem ser adquiridos em cartelas, conforme sugere a figura27.</p>
+
+
+
+<p align="center"><img src="Image27.gif" width="170" height="161"
+
+alt="Image27.gif (22017 bytes)"></p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estes decalques já
+
+prevêm não só a separação certa para os invólucros DIL dos integrados como em alguns
+
+casos até podem ter finíssimas trilhas que passam por entre estes terminais, o que é
+
+praticamente impossível de se conseguir somente com uma caneta comum de circuito
+
+impresso.Para exemplificar como trabalhar com este tipo de componentes, tomemos o circuito
+
+da figura28.</p>
+
+
+
+<p align="center"><img src="Image28.gif" width="425" height="252"
+
+alt="Image28.gif (69304 bytes)"></p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O que temos é um
+
+trimmer que utiliza apenas um integrado do tipo 555 e mais três transistores,
+
+pressionando-se S1, no final do tempo ajustado por Pi, o oscilador entra em ação
+
+&quot;apitando&quot;. Os tempos podem ser ajustados na faixa de alguns segundos até perto
+
+de 5 minutos.Partimos então de uma disposição de componentes conforme o diagrama
+
+levando em conta o formato e disposição dos pinos do circuito integrado, conforme mostra
+
+a figura29.</p>
+
+
+
+<p align="center"><img src="Image29.gif" width="425" height="204"
+
+alt="Image29.gif (53539 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numa
+
+fase inicial, procuramos &quot;alimentar&quot; todos os componentes fazendo as conexões
+
+com a linhas positiva e negativa que correm paralelas pelas bordas horizontais da placa.
+
+Estas conexões correspondem então a:</p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Positivo: R1,<sub> </sub>P1. pinos 8 e 4 do integrado, emissor de Q1 emissor de Q3 e pólo
+
+positivo de C3.</p>
+
+
+
+<blockquote>
+
+  <p ALIGN="JUSTIFY">Negativo: S1 pólo negativo de C1, pino l do integrado, emissor de Q2,
+
+  saída do alto-falante e pólo negativo de C3.</p>
+
+</blockquote>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As
+
+interligações intermediárias são em maior número neste projeto, sendo marcadas com as
+
+letras de A até H e identificadas no diagrama da figura 28. Temos então o circuito
+
+desenhado conforme mostra afigura 30. Observe que R2 deve ir a Cl e também ter conexão
+
+com os pinos 7 e 6 do integrado que são interligados. O resistor R3 deve ser ligado tanto
+
+ao pino a do integrado como à base de Q1.</p>
+
+
+
+<p ALIGN="center"><img src="Image30.gif" width="500" height="452"
+
+alt="Image30.gif (150364 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Neste projeto foi utilizado para P1 um trim-pot mas nada impede que sejam previstas ilhas
+
+de conexão para fios que ligarão um potenciômetro externo. Neste caso também podemos
+
+perfeitamente &quot;melhorar&quot; o projeto com urna disposição de componentes mais
+
+compacta, isso é exemplificado como desenho da figura 31. Também neste caso, devemos
+
+lembrar que o desenho inicial foi feito observando-se a placa pelo lado dos componentes. A
+
+posição dos transistores deve ser estabelecida em função do conhecimento da
+
+disposição de seus terminais.E importante conferir o desenho, da placa pelo diagrama,
+
+para se verificar, se nenhum componente ficou sem alguma ligação.</p>
+
+
+
+<p ALIGN="center"><img src="Image31.gif" width="230" height="369"
+
+alt="Image31.gif (69274 bytes)"></p>
+
+
+
+<p ALIGN="CENTER">MONTAGENS COM DIVERSOS INTEGRADOS</p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nos
+
+projetos digitais que levem diversas integrados, como por exemplo Frequencímetro
+
+relógios, etc, a primeira preocupação ao se desenhar a placa é com sua
+
+alimentação.Existem duas técnicas principais de disposição de alimentação para
+
+placas que possuam muitos integrados. A primeira é mostrada na figura32 e consiste em se
+
+fazer correr as trilhas positiva e negativa nas bordas da placa. descendo
+
+perpendicularmente as trilhas de alimentação para cada integrado. Lembramos a
+
+necessidade de capacitores de desacoplamento junto aos integrados dos em muitas
+
+aplicações mais rápidas.</p>
+
+
+
+<p ALIGN="center"><img src="Image32.gif" width="170" height="94"
+
+alt="Image32.gif (12345 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+
+segunda consiste em se fazer correr as trilhas de alimentação por entre os terminais do
+
+integrado, conforme mostra a figura 33. Neste caso também deve ser prevista a colocação
+
+dos capacitores de desacoplamento.</p>
+
+
+
+<p ALIGN="center"><img src="Image33.gif" width="170" height="77"
+
+alt="Image33.gif (11240 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Num
+
+projeto que tenha muitos integrados será preciso, muitas vezes planejar a disposição
+
+das ligações a partir de diversas tentativas, chegando-se à configuração final
+
+somente depois de muito trabalho.Lembramos que existem programas de computador que podem
+
+fazer este trabalho de interligações, bastando que o operador &quot;peça&quot; os
+
+pontos que devem ser interligados para que a máquina se encarregue de encontrar o
+
+percurso mais favorável para a trilha, sem se utilizar do jumper. No entanto, tais
+
+programas, por serem caros e exigirem até computadores de porte, São um recurso para o
+
+projetista profissional.</p>
+
+
+
+<p ALIGN="CENTER">FAZENDO A PLACA</p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De
+
+posse do lay-out da placa, a elaboração pode ser realizada segundo diversas
+
+técnicas.Para projetos mais simples, que utilizem poucos componentes e que não sejam
+
+críticos, a caneta própria para este tipo de trabalho é suficiente. Esta caneta, assim
+
+como todo o material para corrosão e preparo de uma placa, pode ser adquirido na forma de
+
+kit, nas casas de material eletrônico. A caneta contém uma tinta que não é atacada
+
+pela substância que remove o cobre da placa Desta forma, se desenharmos as trilhas com
+
+esta caneta, na corrosão somente as partes não cobertas serão removidas, ficando o
+
+cobre sob a tinta. Depois, a tinta pode ser removida com facilidade por meio de solvente
+
+especial conforme mostra a figura 34.</p>
+
+
+
+<p ALIGN="center"><img src="Image34.gif" width="201" height="255"
+
+alt="Image34.gif (34962 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No
+
+entanto, no que se refere à aparência final de uma placa feita com este recurso não
+
+temos um trabalho excelente, a não ser que o desenhista tenha muita prática.Para
+
+obtermos linhas bem retas, pontos de conexão &quot;ilhas&quot; bem feitas todas iguais,
+
+existe um recurso melhor que o<b> </b>uso de símbolos auto-adesivo Estes símbolos podem
+
+ser encontrado em cartelas e se transferem facilmente para o cobre da placa. Uma maneira
+
+muito precisa de fazermos a transferência de um desenho para uma placa e depois
+
+aplicarmos ou a canela ou os símbolos auto adesivos é mostrada na figura 35. Fazemos e
+
+desenho original da disposição dos componentes coincidir com a placa e depois marcamos
+
+apenas os pontos de conexão, ou seja, os pontos em que devem ser soldados os terminais
+
+dos componentes e que portanto correspondem a furos, com um punção. Marcando estes
+
+pontos, podemos depois, &quot;copiar&quot; com precisão as trilhas de interligação,
+
+tomando-os como referência. </p>
+
+
+
+<p ALIGN="center"><img src="Image35.gif" width="242" height="340"
+
+alt="Image35.gif (60499 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De
+
+posse do desenho transferido para o cobre, seja com símbolo auto-adesivo ou caneta, o
+
+passo seguinte na preparação da placa é a corrosão. A substancia normalmente usada é
+
+o percloreto de ferro. Esta substância tanto pode ser adquirida em casas de produtos
+
+químicos como também, e com mais facilidade, nas casas de materiais eletrônicos. Os
+
+kits de placas de circuito impresso ja trazem esta substância em quantidade suficiente
+
+para &quot;corroer&quot; dezenas de placas.O percloreto é dissolvido lentamente em água
+
+e depois pode ser usado muitas vezes para fazer placas. Ao manuséa-lo é preciso muito
+
+cuidado pois seus vapores são tóxicos e ele mancha com muita facilidade.O banho
+
+corrosivo é feito, colocando-se a placa numa pequena banheira de plástico ou vidro com o
+
+percloreto (figura 36).Uma pequena movimentação da banheira para agitar o líquido
+
+acelera a corrosão que, conforme a força do percloreto pode durar entre 15 e 40 minutos.</p>
+
+
+
+<p ALIGN="center"><img src="Image36.gif" width="425" height="184"
+
+alt="Image36.gif (54127 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+Depois. da corrosão, lava-se a placa com água comum e limpa-se a tinta da caneta ou o
+
+decalque com um algodão ou esponja de aço que pode estar molhada num pouco de solvente
+
+como benzina ou acetonaFeita a limpeza passe à furação. Pode ser usada uma broca comum
+
+de 1mm eu 0,8 mm, dependendo da espessura dos terminais dos componentes, ou então uma
+
+furadeira do tipo grampeador própria para esta tarefa e que faz parte da maioria dos kits
+
+de fabricação de placas de circuito impresso. Terminada a elaboração da placa é só
+
+proceder à montagem.</p>
+
+
+
+<p ALIGN="CENTER">PLACAS ALTERNATIVAS</p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As
+
+técnicas que descrevemos não são únicas. Existem muitas outras que possibilitam a
+
+realização de projetos e montagens Uma delas é mostrada na figura 37. e consiste na
+
+elaboração de regiões condutores que serão recobertas com esmalte comum de unhas ou
+
+mesmo fita crepe ou fita isolante.</p>
+
+
+
+<p ALIGN="center"><img src="Image37.gif" width="170" height="164"
+
+alt="Image37.gif (24113 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O
+
+procedimento para a projeto desta placa é o mesmo visto no início deste artigo com a
+
+única diferença que, em lugar de termos uma simples trilha ligando os componentes,
+
+fazemos uma região cobreada de maior superfície. De certa forma, esta técnica de
+
+projeto tem algumas vantagens que merecem ser analisadas. Uma delas é o fato de queremos
+
+no desenho pequenas áreas a serem corroídas, o que significa uma boa economia da
+
+solução.Gasta-se muito menos o percloreto para corroer este tipo de placa, o que é
+
+interessante no caso de um projeto industrial. Outra vantagem está no fato de que uma
+
+superfície maior para o cobre representa uma resistência menor para a corrente e
+
+portanto menos problemas com os circuitos de alta corrente ou potência.</p>
+
+
+
+<p ALIGN="JUSTIFY">Mesmo nas placas com trilhas da maneira convencional é comum o
+
+preenchimento dos vazios com tinta ou esmalte, de modo a serem obtidas &quot;ilhas&quot;
+
+de cobre de maior superfície, conforme mostra a figura38.</p>
+
+
+
+<p ALIGN="center"><img src="Image38.gif" width="142" height="111"
+
+alt="Image38.gif (10865 bytes)"></p>
+
+
+
+<p ALIGN="JUSTIFY">Além de economizar percloreto, a colocação destas ilhas melhora a
+
+condução das correntes e até pode servir de blindagem em alguns casos.Para a produção
+
+em série de placas de circuito impresso, o lay-out pode ser transferido para o cobre a
+
+partir de uma tela de silk-screen.A tinta usada não é atacada pelo percloreto, o que
+
+possibilita sua utilização imediata.</p>
+
+
+
+<p ALIGN="JUSTIFY">&nbsp;</p>
+
+
+
+<p ALIGN="left"></font><a href="placas002.htm" target="main">&lt;&lt;&lt;Tras</a></p>
+
+
+
+<p ALIGN="right"><a href="../index3.html" target="main">HOME</a>&nbsp;&nbsp; </p>
+
+
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>
+

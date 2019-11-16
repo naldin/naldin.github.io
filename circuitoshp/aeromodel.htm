@@ -1,0 +1,343 @@
+<html>
+
+<head>
+
+<title>[[((((CIRCUITOS HP))))]]
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;http://circuitoshp.cjb.net</title>
+<STYLE>
+
+a:active{font-style		       	:	normal;
+		text-decoration	       	:	none;}
+		
+a:link	{font-style			       :	normal;
+		text-decoration		       :	none;}
+		
+a:visited{	text-decoration			:	none;
+		font-style			          :	normal;}
+		
+a:hover{text-decoration	    		:	normal;
+       color                      :   #CFB53B;
+                
+		font-style		           	:	normal;}
+</STYLE> 
+
+</head>
+
+<body background="fundo.gif" bgproperties="fixed" text="#00FFFF" link="#00FFFF" vlink="#C0C0C0" bgcolor="#000000" style="font-family: Arial">
+
+<layer name="a0" left=10 top=10 visibility=show bgcolor="#ff0000" clip="0,0,2,2"></layer>
+<layer name="a1" left=10 top=10 visibility=show bgcolor="#ff8000" clip="0,0,2,2"></layer>
+<layer name="a2" left=10 top=10 visibility=show bgcolor="#ffff00" clip="0,0,2,2"></layer>
+<layer name="a3" left=10 top=10 visibility=show bgcolor="#00ff00" clip="0,0,2,2"></layer>
+<layer name="a4" left=10 top=10 visibility=show bgcolor="#0000ff" clip="0,0,2,2"></layer>
+<layer name="a5" left=10 top=10 visibility=show bgcolor="#ff00ff" clip="0,0,2,2"></layer>
+<layer name="a6" left=10 top=10 visibility=show bgcolor="#ffffff" clip="0,0,2,2"></layer>
+
+<div id="starsDiv" style="position:absolute;top:0px;left:0px">
+<div style="position:relative;width:2px;height:2px;background:#ffffff;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#ffff00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#fffa00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#ff0000;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#00ff00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#0000ff;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#FF00FF;font-size:2px;visibility:visible"></div>
+</div>
+
+<script language="JavaScript">
+
+<!-- Original:  freeware.de -->
+<!-- Web Site:  http://freeware.de -->
+<!-- MSIE Fix by:  Kurt Grigg (kurt.grigg@virgin.net) -->
+
+<!--  Begin
+if (document.layers) {
+window.captureEvents(Event.MOUSEMOVE);
+}
+var yBase = 200;
+var xBase = 200;
+var yAmpl = 10;
+var yMax = 40;
+var step = .2;
+var ystep = .5;
+var currStep = 0;
+var tAmpl=1;
+var Xpos = 1;
+var Ypos = 1;
+var i = 0;
+var j = 0;
+if (document.all) {
+function MoveHandler(){
+Xpos = document.body.scrollLeft + event.x;
+Ypos = document.body.scrollTop + event.y;
+}
+document.onmousemove = MoveHandler;
+}
+else if (document.layers) {
+function xMoveHandler(evnt) {
+Xpos = evnt.pageX;
+Ypos = evnt.pageY;
+}
+window.onMouseMove = xMoveHandler;
+}
+function animateLogo() {
+if (document.all) {
+yBase = window.document.body.offsetHeight / 4;
+xBase = window.document.body.offsetWidth / 4;
+}
+else if (document.layers) {
+yBase = window.innerHeight / 4;
+xBase = window.innerWidth / 4;
+}
+if (document.all) {
+for (i = 0 ; i < starsDiv.all.length; i++) {
+starsDiv.all[i].style.top = Ypos + Math.cos((20*Math.sin(currStep/20))+i*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+starsDiv.all[i].style.left = Xpos + Math.sin((20*Math.sin(currStep/20))+i*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+   }
+}
+else if (document.layers) {
+for (j = 0; j < 7; j++) { //7 is number of NS layers!
+var templayer="a" + j;
+document.layers[templayer].top = Ypos + Math.cos((20*Math.sin(currStep/20))+j*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+document.layers[templayer].left =Xpos + Math.sin((20*Math.sin(currStep/20))+j*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+   }
+}
+currStep += step;
+setTimeout("animateLogo()", 10);
+}
+animateLogo();
+// End -->
+</script>
+
+
+<p align="center"><a href="mailto:freadman@ig.com.br" target="_blank"><img src="aeromodel/g2.jpg" border="0" alt="Real Flight G2 - Compre aqui!!!"></a><br>
+
+<p align="center">
+
+<a href=http://circuitoshp.cjb.net target="_blank">
+<img border=1 src=circuito.gif alt="Circuitos HP"></a>
+<img border="0" src="aeromodel/biplano.gif" width="101" height="95"></p>
+
+<!-- INICIO DO CODIGO DO BANNER-LINK -->
+
+<p align="left"><img border="0" src="aeromodel/rcpilot.gif" width="136" height="218">
+
+<a href="http://www.banner-link.com.br/l2.asp?conta=12445&amp;nbanner=1" target="_blank"><img src="http://www.banner-link.com.br/b3.asp?conta=12445&amp;nbanner=24" border="0" alt="clique aqui!">
+</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.banner-link.com.br" target="_top"><img src="http://www.banner-link.com.br/r.gif" width="468" height="16" border="0" alt="by Banner-Link"></a>
+<br>
+
+
+<left><i><b>Cabos e Interfaces</i></b>
+
+<table border="1" width="100%" height="117">
+  <tr>
+    <td width="73%" height="19">Cabo Trainer(Trainer Cords) para rádios FUTABA FM</td>
+    <td width="27%" height="19"><a href="aeromodel/futfm.gif">futfm.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Cabo Trainer(Trainer Cords) para rádios FUTABA
+      AM</td>
+    <td width="27%" height="19"><a href="aeromodel/futam.gif">futam.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Cabo Trainer(Trainer Cords) para rádios JR FM</td>
+    <td width="27%" height="19"><a href="aeromodel/jrfm.gif">jrfm.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Cabo Trainer(Trainer Cords) para rádios Airtronic</td>
+    <td width="27%" height="19"><a href="aeromodel/airamfm.gif">airamfm.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Saiba como adaptar&nbsp; um radio controle de
+      avião para
+      o simulador Real Flight R/C Simulador da GreatPlanes(ou outro simulador), ligado na porta do
+      Joystick do computador.(Português)</td>
+    <td width="27%" height="19"><a href="aeromodel/flight/flight.htm">flight.htm</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="38">Ótimo simulador de aeromodelos com esquema para fazer um
+      cabo e ligar o radio controle do avião na porta paralela do computador.(Português)</td>
+    <td width="27%" height="38"><a href="aeromodel/fms/fms.htm">fms.htm</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Faça uma interface com microprocessador PIC para usar em qualquer simulador, inclusive o RealFlight 
+    da GreatPlanes.</td>
+    <td width="27%" height="19"><a href="aeromodel/ericbrouwer/interfpic.htm">interfpic.htm</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Faça um simples cabo para usar em qualquer simulador, inclusive o RealFlight 
+    da GreatPlanes.</td>
+    <td width="27%" height="19"><a href="aeromodel/smartpropo/smartp.htm">smartp.htm</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Faça um cabo serial para usar o controle JR no simulador FMS</td>
+    <td width="27%" height="19"><a href="aeromodel/cabofmsjr.htm">cabofmsjr.htm</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Faça um cabo para simuladores de aeromodelos para ligar o radio controle do avião na porta serial DB 09 ou DB 25</td>
+    <td width="27%" height="19"><a href="aeromodel/cabo_serial.gif">cabo_serial.gif</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Outro cabo Futaba para simuladores para ser ligado na porta paralela</td>
+    <td width="27%" height="19"><a href="aeromodel/cabo_futaba_all.jpg">cabo_futaba_all.jpg</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Outro cabo JR para simuladores para ser ligado na porta paralela</td>
+    <td width="27%" height="19"><a href="aeromodel/cabo_jr_all.jpg">cabo_jr_all.jpg</a></td>
+  </tr>
+</table><br>
+
+
+<i><b>Circuitos</i></b>
+
+<table border="1" width="100%" height="117">
+  <tr>
+    <td width="73%" height="19">Simples circuito para painel de caixa de campo.</td>
+    <td width="27%" height="19"><a href="aeromodel/painelrgb.jpg">painelrgb.jpg</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Medidor do nível de tensão do receptor</td>
+    <td width="27%" height="19"><a href="aeromodel/rxmeter.gif">rxmeter.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Medidor do nível de tensão do receptor 2</td>
+    <td width="27%" height="19"><a href="aeromodel/hotcheck.htm">hotcheck.htm</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Localizador sonoro de aeromodelos I</td>
+    <td width="27%" height="19"><a href="aeromodel/locator.gif">locator.gif</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Localizador sonoro de aeromodelos II</td>
+    <td width="27%" height="19"><a href="aeromodel/adl.htm">adl.htm</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Localizador sonoro de aeromodelos III</td>
+    <td width="27%" height="19"><a href="aeromodel/locator001/locator001.htm">locator001.htm</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="19">Localizador sonoro de aeromodelos IV</td>
+    <td width="27%" height="19"><a href="aeromodel/locator002/locator002.htm">locator002.htm</a></td>
+  </tr>
+   <tr>
+    <td width="73%" height="19">Ciclador que usa o próprio carregador dos pack´s</td>
+    <td width="27%" height="19"><a href="aeromodel/cycler.gif">cycler.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19"><font color="#80FFFF">Reativador de </font>pack´s<font color="#80FFFF">
+      com &quot;efeito
+      memória&quot;</font></td>
+    <td width="27%" height="19"><a href="outros/amnesia.gif">amnesia.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Carregador veicular para baterias de NiCad</td>
+    <td width="27%" height="19"><a href="aeromodel/charger.gif">charger.gif</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Construa seu próprio "adaptador-Y" buferizado</td>
+    <td width="27%" height="19"><a href="aeromodel/yadap.htm">yadap.htm</a></td>
+  </tr>
+</table><br>
+
+
+<i><b>Outros</i></b>
+
+<table border="1" width="100%" height="117">
+  <tr>
+    <td width="73%" height="19">Como fazer uma bomba de fumaça para aeromodelo.</td>
+    <td width="27%" height="19"><a href="aeromodel/bomba/bomba.htm">bomba.htm</a></td>
+  </tr>
+ <tr>
+    <td width="73%" height="19">Conector artesanal para aquecedor de vela</td>
+    <td width="27%" height="19"><a href="aeromodel/glowplug.jpg">glowplug.jpg</a></td>
+  </tr> 
+<tr>
+    <td width="73%" height="19">Projeto de uma caixa de madeira para guardar o radio controle</td>
+    <td width="27%" height="19"><a href="aeromodel/caixa.gif">caixa.gif</a></td>
+  </tr>
+<tr>
+    <td width="73%" height="17">Numeros de seriais do simulador Real Flight da Greats Planes</td>
+    <td width="27%" height="17"><a href="aeromodel/serialrc.htm" >serialrc.htm</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Programas para calcular o Centro de Gravidade e o Fator de Performace de aeromodelos</td>
+    <td width="27%" height="19"><a href="aeromodel/cgpf.zip">cgpf.zip</a></td>
+  </tr>
+   <tr>
+    <td width="73%" height="19">Arquivo em Excel que ajuda a fazer a conta do combustivel. Metanol,Oleo e Nitrometano</td>
+    <td width="27%" height="19"><a href="aeromodel/fuelmix.zip">fuelmix.zip</a></td>
+  </tr>
+</table><br>
+
+
+<i><b>Matérias</i></b>
+
+<table border="1" width="100%" height="117">
+<tr>
+    <td width="73%" height="19">Saiba como cuidar corretamente de seus packs de
+      baterias TX e RX</td>
+    <td width="27%" height="19"><a href="tutoriais/packs.htm">packs.htm</a></td>
+  </tr>
+ <tr>
+    <td width="73%" height="19">Matéria sobre amaciamento e regulagem de
+      motores</td>
+    <td width="27%" height="19"><a href="aeromodel/motor.txt">motor</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Texto sobre aeromodelismo, ideal para quem está
+      começando.</td>
+    <td width="27%" height="19"><a href="aeromodel/licoesaero.zip">licoesaero.zip</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Manuais de rádios Futaba</td>
+    <td width="27%" height="19"><a href="http://www.futaba-rc.com/manuals/index.html">manuais</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="19">Manuais de rádios JR</td>
+    <td width="27%" height="19"><a href="http://horizon.hobbyshopnow.com/products/jr.asp">manuais</a></td>
+  </tr>
+   <tr>
+    <td width="73%" height="19">Todas os canais e freqüências de aero, auto e
+      nautimodelismo</td>
+    <td width="27%" height="19"><a href="aeromodel/frequencia.htm">frequencia.htm</a></td>
+  </tr>
+</table><br>
+
+
+<i><b>Links</i></b>
+
+<table border="1" width="100%" height="117">
+  <tr>
+    <td width="73%" height="17">Pagina com diversos acessórios eletrônicos
+      para aeromodelismo.</td>
+    <td width="27%" height="17"><a href="http://www.planecon.com.br" target="_blank">planecon</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="17">Pagina com diversos assuntos de eletrônica
+      principalmente voltados ao aeromodelismo.</td>
+    <td width="27%" height="17"><a href="http://www.uoguelph.ca/~antoon/" target="_blank">Tony´s</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="17">Procurando por plantas de aeromodelos??? Aqui voce vai encontrar varias delas....</td>
+    <td width="27%" height="17"><a href="http://www.geebee.hpg.ig.com.br/" target="_blank">geebee</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="17">O 1º site brasileiro sobre microturbinas para aeromodelos.</td>
+    <td width="27%" height="17"><a href="http://www.microturbina.cjb.net/" target="_blank">Microturbinas</a></td>
+  </tr>
+  <tr>
+    <td width="73%" height="17">Pagina do aeroclube do autor da Circuitos HP</td>
+    <td width="27%" height="17"><a href="http://acamg.cjb.net/" target="_blank">ACA-MG</a></td>
+  </tr>
+</table>
+</left>
+
+<p align="center"><a href="http://www.amars.hpg.com.br" target="_blank"><img
+src="http://www.amars.hpg.com.br/links/banner.jpg" width="468" height="60"
+alt="Clique Aqui, e Vôoe para o Mundo do Aeromodelismo!" border="0"></a></p>
+
+<p align="center"><a href="http://www.aeromodelos.net" target="_blank"><img SRC="aeromodelnet.gif" ALT="Aeromodelos.net" BORDER=0 ></a></p>
+
+<p align="right"><font face="arial" size="1"><a href="http://circuitoshp.cjb.net"><i><b>Por Circuitos HP</i></b></a></p>
+
+</html>

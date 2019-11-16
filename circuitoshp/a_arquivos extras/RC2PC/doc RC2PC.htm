@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm -->
+<HTML><HEAD><TITLE>doc RC2PC</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<META content=none name="Microsoft Theme">
+<META content="none, default" name="Microsoft Border"></HEAD>
+<BODY><FONT size=2><B>
+<P align=center>RC2PC OU COMMENT RELIER VOTRE RADIOCOMMANDE A VOTRE PC</B></P>
+<P></FONT><FONT size=3>Vous utilisez un logiciel de simulation de vol&nbsp;? 
+(Real Flight, Aérofly, Flight Simulator…) Pilotez-le avec votre 
+radiocommande&nbsp;!</P><U><B>
+<P><FONT color=#000000>Présentation&nbsp;</FONT></B></U></P>
+<P>&nbsp;&nbsp;&nbsp; RC2PC (prononcer RC to PC) est un montage qui permet à 
+votre émetteur RC de parler la langue des PC (ou compatible). Il est né de 
+l’envie de piloter sur les simulateurs de vol autrement qu’avec les sempiternels 
+joysticks. Si vos pouces vous démangent à l’idée de faire la même chose chez 
+vous … C’est possible&nbsp;! Il vous suffit de réaliser ce petit montage simple, 
+sans réglage, pas hors de prix… Il me le faut, dites-vous&nbsp;? Si l’assemblage 
+de 19 composants électroniques (<A 
+href="http://membres.lycos.fr/silicium31/RC2PC/rc2pc_v3.htm">15 pour la version 
+3.0</A>/3.1) ne vous fait pas peur…, alors vite au boulot… </P>
+<P>&nbsp;&nbsp;&nbsp; RC2PC s’intercale entre votre émetteur et la prise 
+joystick d’un PC (<A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig1">figure 1</A>). 
+Il analyse les 4 premières voies produites par le codeur de votre émetteur et 
+transforme ces 4 informations en 4 résistances variables dont la valeur est liée 
+à la position des manches. Ces 4 résistances variables étant câblées comme 2 
+joysticks 2 axes, le PC ne se rend absolument pas compte du subterfuge. Le 
+montage est ainsi compatible avec TOUS les logiciels fonctionnant avec un ou 
+deux joysticks. </FONT><FONT size=2></P>
+<P><IMG height=352 alt="fig1.gif (4943 octets)" 
+src="doc RC2PC_arquivos/fig1.gif" width=555><A name=fig1></A></P><U><B>
+<P></FONT><FONT size=3>Caractéristiques&nbsp;:</B></U></P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <STRONG>Compatible avec TOUS les 
+logiciels utilisant le port joystick du PC,</STRONG></P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gestion des quatre axes (gaz, 
+dérive, profondeur et ailerons),</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <STRONG>Tous les réglages 
+(couplages, mixages, expo, dual-rate…) de l’émetteur sont 
+transmis&nbsp;!</STRONG></P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quatre boutons poussoirs ou 
+interrupteurs disponibles (train, flap, …),</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Résolution de 8 bits 
+(échantillonnage et potentiomètre numérique à 256 positions),</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alimentation par le PC de RC2PC et 
+du récepteur annexe éventuel (mode Rx).</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <STRONG>Isolation galvanique entre 
+l’émetteur RC et le PC,</STRONG></P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Emetteur quelconque nécessaire (4 
+à 12 voies&nbsp;). Le sens de modulation est indifférent (<A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig3">figure 
+3</A>).</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sélection du <U><STRONG>mode 
+PPM</STRONG></U> (liaison avec l’émetteur) ou <STRONG><U>mode Rx</U></STRONG> 
+(utilisation d’un récepteur) <U><STRONG>automatique</STRONG></U>.</FONT><FONT 
+size=2></P>
+<P>&nbsp;&nbsp; </FONT><FONT size=3>&nbsp;&nbsp;&nbsp;&nbsp; </FONT><IMG 
+height=12 alt="news.gif (1080 octets)" src="doc RC2PC_arquivos/news.gif" 
+width=24><STRONG>L'affectation du numéro des voies de l'émetteur par rapport aux 
+axes joystick est paramétrable par l'utilisateur.</STRONG><FONT size=2></P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG height=12 
+alt="news.gif (1080 octets)" src="doc RC2PC_arquivos/news.gif" 
+width=24><BIG><STRONG>Fonction Fire</STRONG> : La voie 5 commande le bouton 
+poussoir SW1 (F0 joystick). En mode PPM seulement.</BIG></P>
+<P><IMG height=287 alt="fig3.gif (4224 octets)" 
+src="doc RC2PC_arquivos/fig3.gif" width=664><A name=fig3></A></P><U><B>
+<P></FONT><FONT size=3>La connexion au TX</B></U></P>
+<P>&nbsp;&nbsp;&nbsp; La liaison entre l’émetteur et RC2PC est isolée 
+galvaniquement (pas de liaison électrique). Ainsi, le PC (relié au secteur) ne 
+peut pas détruire votre émetteur. Ne croyez pas cette protection superflue car 
+votre ordinateur est probablement relié au réseau électrique et celui-ci peut 
+jouer des mauvais tours (orage).</P>
+<P>&nbsp;</P>
+<P>Il y a 3 façons de raccorder RC2PC à votre émetteur. 
+<OL>
+  <LI type=disc>A l’aide de la prise écolage si celle-ci sort la modulation et 
+  une alimentation capable de fournir une dizaine de mA (pour alimenter la LED 
+  d’un photocoupleur).<BR>Le brochage de la prise écolage des émetteurs FUTABA 
+  (ou Hitec) est donné <A 
+  href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2b">figure 
+  2b</A>.<BR>Le brochage des émetteurs MULTIPLEX est donné <A 
+  href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2c">figure 
+  2c</A>.<BR>Le brochage GRAUPNER (pour ceux qui ont équipé leur émetteur du 
+  module écolage GRAUPNER) est donné à la <A 
+  href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2d">figure 
+  2d</A>.<BR>Le brochage de l'emetteur SANWA RD6000 est donné <A 
+  href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2e">figure 
+  2e</A>.<BR>Le brochage pour émetteur Robbe à la <A 
+  href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2f">figure 
+  2f</A>.<BR>
+  <LI>En ajoutant une prise sur votre émetteur. Solution très simple si vous 
+  connaissez l’emplacement du signal PPM (Pulse Position Modulation) dans votre 
+  émetteur (A l’entrée du module HF). Un oscilloscope peut être utile pour 
+  localiser le signal PPM sans erreur (l’allure du signal PPM est donnée <A 
+  href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig3">figure 
+  3</A>). 
+  <LI>En utilisant un récepteur sortant les voies 1 à 4. Il sera alimenté par le 
+  montage. La liaison est alors sans fil… L’avantage de cette solution est qu’il 
+  n’y a aucun branchement à faire sur l’émetteur. Elle impose par contre 
+  l’utilisation d’un récepteur quelconque (RC2PC à été testé sur des récepteurs 
+  FUTABA, MULTIPLEX et GRAUPNER).<A name=fig2b></A> </LI></OL><U><B>
+<P></B></U><IMG height=273 alt="fig2b.gif (2491 octets)" 
+src="doc RC2PC_arquivos/fig2b.gif" width=307 align=left><IMG height=272 
+alt="Fig2c.gif (2168 octets)" src="doc RC2PC_arquivos/Fig2c.gif" width=310 
+border=0><A name=fig2c></A><IMG height=272 alt="Fig2d.gif (1814 octets)" 
+src="doc RC2PC_arquivos/Fig2d.gif" width=310><A name=fig2d></A></P>
+<P><IMG height=272 alt="Fig2e.gif (3259 octets)" 
+src="doc RC2PC_arquivos/Fig2e.gif" width=310><A name=fig2e></A><IMG height=273 
+alt="fig2f.gif (3073 octets)" src="doc RC2PC_arquivos/fig2f.gif" width=307><A 
+name=fig2f></A><A name=fig2g></A></P>
+<P><U><B>Le schéma (<A 
+href="http://membres.lycos.fr/silicium31/images/fig4.gif">figure 4</A> V2.31) ou 
+<A 
+href="http://membres.lycos.fr/silicium31/RC2PC/SchRC2PCV31.PDF">V3.0</A></B></U></P>
+<P>Construit autour d’un microcontrôleur (uC) MICROCHIP PIC16x84, il est sans 
+surprise. Le uC analyse soit la modulation PPM (mode PPM), soit les signaux V1 à 
+V4 issus d’un récepteur annexe (mode Rx).</P><U>
+<P>Mode PPM</U>&nbsp;: La modulation PPM présente sur J2 est bufférisée par Q1 
+et est transmise par l’optocoupleur à sortie logique PC900V à l’entrée RB0/INT 
+du uC. Le uC mesure les durées entre chaque fronts et en déduit la position des 
+manches 1 à 4. Le nombre de voies présentes dans le signal PPM peut varier de 4 
+à 12. Les voies supplémentaires sont simplement ignorées.</P><U>
+<P>Mode Rx</U>&nbsp;: Le uC mesure la durée des signaux présents sur les entrées 
+RB4 à RB7 (J3), il en déduit également la position des manches. Dans ce mode, la 
+position des voies sur J3 est sans importance, le uC est capable de retrouver le 
+numéro d’ordre des voies.</P>
+<P>Dans chacun des modes, les quatre potentiomètres numériques AD8400 sont 
+positionnés à une valeur ohmique en rapport avec la durée de leur voie 
+respective. Le taux de conversion entre la durée d’une voie et la valeur prise 
+par le potentiomètre numérique est fixe. Ce taux est optimisé pour une course de 
+servo normale (1ms à 2 ms). Si votre émetteur est programmable, vous pouvez 
+optimiser la course des manches en réglant la durée des voies (une LED s’allume 
+pour indiquer que la course est en dépassement). Ce réglage est totalement 
+facultatif, le montage fonctionne parfaitement avec un émetteur non 
+programmable.</P>
+<P><IMG height=12 alt="news.gif (1080 octets)" src="doc RC2PC_arquivos/news.gif" 
+width=24> Le bouton poussoir F0 relié à l'entrée RA4, permet de modifier 
+l'affectation des axes joysticks aux voies de votre émetteur. A la mise sous 
+tension, et pendant une minute, chaque appui sur F0 change la combinaison 
+d'affectation. Vous pouvez donc maintenant très facilement adapter votre 
+émetteur à n'importe quel logiciel ! A noter, la LED clignote pendant cette 
+minute et lorsque le clignotement s'arrête, les actions sur F3 ne changent plus 
+l'ordre d'affectation et agissent seulement au niveau du PC (si celui-ci utilise 
+ce bouton poussoir).</P>
+<P><IMG height=12 alt="news.gif (1080 octets)" src="doc RC2PC_arquivos/news.gif" 
+width=24> Une action longue sur F0 (&gt;5s) <U>après l'arrêt du clignotement de 
+la LED</U> active le mode Fire : La voie 5 contrôle le bouton poussoir F0. Si la 
+durée de la voie 5 est supérieure à 1,5 ms, F0 (SW1) est fermée, sinon, F0 est 
+ouvert.</P><U><B>
+<P>Réalisation</B></U></P>
+<P>En possession du circuit imprimé simple face (figure 5 <A 
+href="http://membres.lycos.fr/silicium31/images/rc2pc_ci.jpg">V2.31</A> ou <A 
+href="http://membres.lycos.fr/silicium31/images/rc2pc31.jpg">V3.0</A>), du 
+schéma d’implantation (figure 6 <A 
+href="http://membres.lycos.fr/silicium31/images/rc2pc_imp.gif">V2.31</A> ou <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/ImpRC2PCV31.PDF">V3.0</A>) et des 
+composants <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/rc2pc_comp.htm">V2.31</A> ou <A 
+href="http://membres.lycos.fr/silicium31/images/ListeV3.PDF">3.0</A>, implanter 
+les 6 straps (3 pour la version 3.0), résistances, condensateurs (C3 est 
+polarisé), transistor, quartz, supports (au moins pour le PIC16x84 qui peut être 
+reprogrammé), connecteurs et boutons poussoirs. Souder ensuite le cms coté 
+cuivre (utiliser une panne très fine et ne pas le mettre à l'envers ! le repère 
+est vers C3). A noter que le circuit imprimé permet d’implanter des inverseurs 
+unipolaires ou de boutons poussoirs (version 2.31).</P>
+<P>&nbsp;<IMG height=12 alt="news.gif (1080 octets)" 
+src="doc RC2PC_arquivos/news.gif" width=24>Pour la version 2.31, un fil doit 
+être câblé entre la broche RA4 du PIC16x84 et le signal F0 du bouton poussoir 
+SW1 (voir le schéma). Pour voir où ce fil doit être soudé coté piste du circuit 
+imprimé cliquez <A 
+href="http://membres.lycos.fr/silicium31/images/modifv22.jpg">ici</A>.</P>
+<P>Le schéma du câble de liaison avec le PC est donné <A 
+href="http://membres.lycos.fr/silicium31/images/fig2a.gif">figure 2a</A>, ce 
+câble peut être réalisé avec deux connecteurs DB15 à sertir sur un câble plat de 
+15 conducteurs ou bien avec des connecteurs DB15 à souder et un câble à 10 
+conducteurs.</P>
+<P>La liaison avec votre émetteur (si vous choisissez le mode PPM) implique la 
+réalisation d’un câble à 3 conducteurs branché sur la prise écolage. Si vous 
+connaissez le brochage de cette prise, c’est très simple (la <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2b">figure 2b</A> 
+donne le brochage FUTABA (ou HITEC), la <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2c">figure 2c</A> 
+le brochage MULTIPLEX ), la <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2d">figure 2d</A> 
+le brochage GRAUPNER), la <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2e">figure 2e</A> 
+le brochage SANWA RD6000,la <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig2f">figure 2f</A> 
+le brochage Robbe,&nbsp; sinon un oscilloscope permettra de repérer très 
+facilement le signal PPM (l’allure d’un signal PPM est donnée <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/docrc2pc.htm#fig3">figure 3</A>) 
+ainsi qu’une alimentation dont la valeur importe peu (5 à 12V). Si vous vous 
+trompez dans la localisation des signaux, votre émetteur ne risque rien, le 
+prélèvement d’intensité sur chaque broches étant limité dans le pire des cas à 
+quelque mA.</P><U><B>
+<P>Essais</B></U></P>
+<P>&nbsp;&nbsp; Quelques AD8403 ayant trépassés inexplicablement, si votre PC 
+n'est pas relié à la terre, essayez dans la mesure du possible de connecter 
+RC2PC au PC lorsque le PC est arrêté... Personnellement, je n'ai rencontré aucun 
+problèmes... mais...</P>
+<P>Dans un premier temps, relier RC2PC au PC (votre radiocommande n’est pas 
+reliée). Le clignotement de la LED indique que le mode 'Ré Affectation des 
+voies' est actif. Sous WINDOWS 95/98, dans le menu de configuration des 
+joysticks (Démarrer, Paramètres, Panneau de configuration, Contrôleurs de jeux) 
+supprimer tout contrôleur présent et ajouter un contrôleur personnalisé, 
+sélectionner 4 axes, 4 boutons, nommez le RC2PC par exemple puis OK. L’état doit 
+être OK, indiquant que le PC a détecté RC2PC (en cas de problème, vérifier votre 
+câble).</P>
+<P>Relier ensuite votre radiocommande à RC2PC et en cliquant sur Propriétés, 
+Test, les mouvements de vos manches et des quatre boutons poussoir doivent être 
+reproduit dans la fenêtre de test. Si le clignotement de la LED s'est arrêté, 
+(arrêt après une minute) il suffit de débrancher puis rebrancher le câble 
+RC2PC/PC pour réinitialiser RC2PC. Si la LED clignote, chaque appui sur le 
+bouton F0 (SW1) change la combinaison d'affectation des axes joysticks par 
+rapport aux numéros des voies. Après 24 actions sur F3, toutes les combinaisons 
+ont été explorées (nombre de combinaisons = 4!=1x2x3x4=24). Pour le moment, vous 
+pouvez choisir une combinaison quelconque. Pendant le clignotement, un appui 
+d'une durée supérieure à 2 secondes, mémorise l'affectation, en mémoire non 
+volatile (EEPROM interne du PIC 16x84). A la prochaine mise sous tension, c'est 
+cette combinaison qui sera utilisée. La LED peut s’allumer en fin de course pour 
+indiquer que votre Tx fournit un signal qui dépasse la norme (cela n’indique pas 
+que votre Tx est défectueux&nbsp;!). Dans la fenêtre de test, l’amplitude des 
+déplacements est probablement insuffisante : Etalonner les déplacements. Pour 
+cela, suivez la procédure indiquée dans la fenêtre d’étalonnage (quand Windows 
+vous demande d’appuyer sur un des boutons du contrôleur, il faut appuyer sur 
+l’un des boutons de RC2PC). <FONT color=#ff0000>Attention !</FONT> Quand Windows 
+vous demande de centrer les manches, <FONT color=#ff0000>le manche de gaz doit 
+être positionner à mi-gaz</FONT>. Lorsque le calibrage à été effectué, vous 
+pouvez utiliser votre nouveau joystick à votre convenance&nbsp;!</P>
+<P><IMG height=12 alt="news.gif (1080 octets)" src="doc RC2PC_arquivos/news.gif" 
+width=24> <A name=Fire></A>Après arrêt du clignotement de la LED, une action 
+longue sur SW1 (&gt;5s) active le mode Fire. Dans ce mode, vous pouvez vérifier 
+dans la fenêtre de test des joysticks que la voie 5 commande bien le boutons 
+poussoir n°1. <U>Note</U> : Pour sortir du mode Fire, il faut débrancher 
+RC2PC.</P><U><B>
+<P>Réglages</B></U></P>
+<P><IMG height=12 alt="news.gif (1080 octets)" src="doc RC2PC_arquivos/news.gif" 
+width=24><A name=Réaffectation></A>Le logiciel ayant été modifié, maintenant 
+l'affectation des axes joysticks par rapport aux numéros des voies n'est plus 
+fixe ! A la mise sous tension, la LED clignote pour indiquer que la 
+ré-affectation est possible. Dans votre logiciel de vol préféré, si les axes ne 
+sont pas à la bonne place (gaz à la place de la profondeur par exemple), chaque 
+appui sur la touche F0 (SW1) change l'affectation des voies. Lorsque vous aurez 
+trouvé la combinaison correcte (les 24 combinaisons <U>défilent toutes</U> 
+successivement), appuyez sur F0 pendant plus de 2 secondes et la combinaison est 
+mémorisée en mémoire non volatile! (EEPROM interne du PIC16F84). Cette 
+modification logicielle (importante...) rend caduque la modification de 
+l'affectation par modification du câble RC2PC/PC. Une modification hardware est 
+nécéssaire pour la version 2.31 et consiste en l'ajout d'un fil coté piste du 
+circuit imprimé (cliquez <A 
+href="http://membres.lycos.fr/silicium31/images/modifv22.jpg">ici</A> pour voir 
+où placer ce fil). Les possesseurs d'une version précédente peuvent cliquer <A 
+href="http://membres.lycos.fr/silicium31/f.htm#Mise à jour">ici</A> pour obtenir 
+la mise à niveau de leur PIC16F84.</P>
+<P>Ce paragraphe ne concerne que les (heureux) propriétaires d’une radiocommande 
+programmable. Vous pouvez ajuster au mieux le débattement utile de vos manches 
+en réglant la course des voies 1 à 4. Pour cela, diminuer ou augmenter la course 
+de chaque voie (sur votre émetteur), de telle façon que la LED présente sur 
+RC2PC ne s’allume pas lorsque vos manches sont au minimum ou au maximum de leur 
+course.</P><U><B>
+<P>En conclusion</B></U></P>
+<P>L’auteur vous souhaite un pilotage agréable et se tient à votre disposition 
+pour tous compléments d’informations. Le PIC 16x84 sera fourni programmé par 
+l’auteur. Pour commander les différents éléments constituant RC2PC, consulter <A 
+href="http://membres.lycos.fr/silicium31/RC2PC/tarifs_RC2PC.htm">le 
+tarif</A>.</P>
+<P>&nbsp;Vous pouvez me contacter par courrier électronique à l’adresse&nbsp;: 
+<A href="mailto:ptouzet@ifrance.com">ptouzet@ifrance.com</A> </P>
+<P>Bons vols…</FONT></P>
+<P align=center><A 
+href="http://membres.lycos.fr/silicium31/presentation.htm">vers la page 
+principale</A> </NOSCRIPT>
+<SCRIPT src="doc RC2PC_arquivos/ad.htm" type=text/javascript></SCRIPT>
+</P></BODY></HTML>

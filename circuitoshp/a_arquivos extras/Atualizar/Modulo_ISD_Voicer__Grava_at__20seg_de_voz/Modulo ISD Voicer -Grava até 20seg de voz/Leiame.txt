@@ -1,0 +1,25 @@
+Este circuito deve ser aberto com o software Eagle que vc pode pegar 
+"gratis" na pagina: www.cadsoft.de/freeware.htm 
+
+Se precisar do manual desse software e a apostila 
+de como transferir o desenho para a placa me contacte( malinoswki@ig.com.br ).
+
+Qualquer duvida me envie um e-mail( malinoswki@ig.com.br ).
+
+
+Instruções do projeto:
+
+Este CI(ISD1420) permite a gravação de até 20s. Quando pressionamos o botão 
+rec o led se acende e começa a gravação, quando acabar o tempo o led apagará.
+Para reproduzir podemos apertar PL ou PE.
+PE-é só pressionar e soltar
+PL-é necessário segurar pressionado.
+
+No potenciômetro de 1K(P1) ajustamos a saída de audio. No potenciômetro P2 
+regulamos o nível de gravação quando usamos um audio externo ao invés do mic.
+No AF em paralelo com P2 monitoramos o audio de entrada. Lembre-se a impedância
+de entrada deste circuito e baixa(8 omhs).
+Este projeto tem um estágio amplicador de 20Watts.
+
+Elvis Malinowsky 
+

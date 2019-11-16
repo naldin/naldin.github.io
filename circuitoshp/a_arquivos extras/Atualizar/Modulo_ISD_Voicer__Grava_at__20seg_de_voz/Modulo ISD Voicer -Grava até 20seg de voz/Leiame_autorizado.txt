@@ -1,0 +1,59 @@
+Este Projeto  deve ser aberto com o software Eagle que vc pode pegar "gratis" na pagina: www.cadsoft.de/freeware.htm.
+Se precisar do manual desse software e a apostila de como transferir o desenho para a placa me contacte( malinoswki@ig.com.br ).
+Qualquer duvida me envie um e-mail( malinoswki@ig.com.br ).
+
+
+Instruções do projeto:
+
+
+-Este CI(ISD1420) permite a gravação de até 20s. Quando pressionamos o botão Rec o led se acende e começa a gravação, quando acabar o tempo o led apagará.
+
+-Para reproduzir podemos apertar PL ou PE.
+
+-PE-é só pressionar e soltar.
+
+-PL-é necessário segurar pressionado.No potenciômetro de 1K(P1) ajustamos a saída de audio. 
+
+Este projeto tem um estágio amplicador de 20Watts e a resistencia do alto-falante é de 8 Ohms.
+
+Obs: O regulador Tip7805 e o TDA *amplificador deve ter dissipador de calor e devidamente isolados por mica ou com dissipadores independentes e os resistores podem ser de ¹/8 de W e os capacitores eletroliticos são de 35V para maior durabilidade e os potenciometros devem ser colocados fora da placa.
+
+Segue a lista dos componentes:Partlist exported from C:/Arquivos de programas/EAGLE-4.09r2/projects/New_Project_1/Modulo ISD Voicer.sch at 16/05/2003 01:09:06 
+
+Part                Value                     
+
+C1                    1nF                               
+C2                    4,7uF                  
+C5                    100nF     
+C6                    100nF         
+C8                    100nF      
+C9                    100nF           
+C10                  100uF 
+C11                  220uF      
+C12                  10uF     
+C13                  10uF      
+Falante             8 Ohms
+IC1                   ISD1420                                       
+IC3                   TIP 7805      
+IC4                   TDA2003V                                    
+LED1                 LED MONITOR LED5MM                 MIC                   Eletreto      
+R1                    100K                             
+R2                    100K         
+R3                    100K                   
+R4                    1K         
+R5                    10K                               
+R6                    10K                              
+R7                    1K                             
+R8                    470K        
+R9                    4K7                                          
+R10                  100R                             
+R11                  1K          
+R12                  1K                                  
+S1                     REC                                
+S2                     PE                                              S3                     PL                              
+
+" Atenção este circuito está protegido por leis de direitos autorais , deverá ser usado somente para o uso próprio ou uso em escolas e sem fins lucrativos"
+
+Elvis Malinowsky 
+
+Técnico em Eletrônica e Mecânica - SP

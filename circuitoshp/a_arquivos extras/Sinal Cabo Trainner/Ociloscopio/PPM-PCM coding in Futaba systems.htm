@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0058)http://www.mh.ttu.ee/risto/rc/electronics/radio/signal.htm -->
+<HTML><HEAD><TITLE>PPM/PCM coding in Futaba systems</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=Content-Language content=en-us>
+<STYLE>A:hover {
+	COLOR: red
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY background="PPM-PCM coding in Futaba systems_arquivos/rc.jpg" 
+stylesrc="main.htm">
+<H2 align=center>PPM and PCM signal coding in Futaba systems</H2>
+<P>&nbsp;</P>
+<P>After writing this page, I was informed about one page (much better than 
+mine) in Internet about different R/C modulations:<BR><A 
+href="http://www.aerodesign.de/peter/2000/PCM/PCM_PPM_eng.html" 
+target=_blank>http://www.aerodesign.de/peter/2000/PCM/PCM_PPM_eng.html</A></P>
+<HR>
+
+<P>Everything in this page is just measured from the existing system and the 
+written text is just based on assumptions. There is no confirmation from FUTABA 
+for this information. All additions and bugs are welcome (<A 
+href="mailto:risto.koiva@web.de">risto.koiva@web.de</A>).</P>
+<P>The info is measured at the output of <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/radio/tx.htm#fc28">ROBBE/FUTABA 
+<I>FC-28</I> v.3.2</A> Trainer4 module with TEKTRONIX <I>THS720</I> digital 
+oscilloscope.</P>
+<P><A href="http://www.mh.ttu.ee/risto/rc/electronics/radio/signal.htm#PPM">PPM 
+signal</A> (Pulse-Position-Modulation)<BR><A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/radio/signal.htm#PCM">PCM 
+signal</A> (Pulse-Code-Modulation)</P>
+<HR>
+
+<H3><A name=PPM>PPM</A> signal (Pulse-Position-Modulation):</H3>
+<P><IMG height=435 src="PPM-PCM coding in Futaba systems_arquivos/01.jpg" 
+width=585 border=0></P>
+<P>8-channels are sent, reset pulse time 10ms, frame time 22.16ms (all-channels 
+neutral (8*1.52ms))</P>
+<P>Close-up of the signal:</P>
+<P><IMG height=445 
+src="PPM-PCM coding in Futaba systems_arquivos/all%20center.jpg" width=592 
+border=0></P>
+<P>The spacing between high-pulses has constant width.</P>
+<P>Channel 2 extended to one end:</P>
+<P><IMG height=442 
+src="PPM-PCM coding in Futaba systems_arquivos/ch2%20narrow.jpg" width=589 
+border=0></P>
+<P>Channel 2 extended to another end:</P>
+<P><IMG height=443 
+src="PPM-PCM coding in Futaba systems_arquivos/ch2%20wide.jpg" width=591 
+border=0></P>
+<HR>
+
+<H3><A name=PCM>PCM</A> Signal (Pulse-Code-Modulation)</H3>
+<P>Notice the 28ms long frame. The frame starts or ends with 3ms high-pulse 
+(reset) - it depends how to look. In the following I have taken that the frame 
+starts with the reset pulse. The principle is similar to PPM.</P>
+<P><IMG height=448 src="PPM-PCM coding in Futaba systems_arquivos/16.jpg" 
+width=590 border=0></P>
+<P>Close-up of the start of the frame:</P>
+<P><IMG height=451 
+src="\\imigrantes\D\ronaldo\Documentos\HP\chp\Sinal Cabo Trainner\PPM-PCM coding in Futaba systems_arquivos\01(1).jpg" 
+width=597 border=0></P>
+<P>New bit is sent every 300µs. One can read from the above picture: 
+reset-00101010010111...<BR>The first bits in the frame are in my opinion the 
+frame indicator. For normal frames they seem to be: 00101<BR>The other frame 
+types are for failsafe data and channels above 8 (ch9 and ch10 in <I>FC-28</I> 
+etc.)</P>
+<P>In normal frame, after the frame indicator, comes the channel position data. 
+All 1-8 channels are sent in sequence, each with 10-bit (1024 position 
+resolution). At the end of the frame is one low bit (0). I am also assuming that 
+the value 1111111111 is not allowed (would equal to reset).</P>
+<P>I have not found any parity or ECC info in the normal frame (but have not 
+looked into it for very long also).</P>
+<P>Channel 2 stick is moved (notice that sometimes also ch1 data changes, due to 
+the fact that with hand one cannot change the stick very easily JUST in one 
+direction, so the other channel on the same stick is also affected):</P>
+<P><IMG height=169 src="PPM-PCM coding in Futaba systems_arquivos/02.jpg" 
+width=495 border=0></P>
+<P><IMG height=175 src="PPM-PCM coding in Futaba systems_arquivos/03.jpg" 
+width=494 border=0></P>
+<P><IMG height=169 src="PPM-PCM coding in Futaba systems_arquivos/04.jpg" 
+width=495 border=0></P>
+<P>Channel 1 stick is moved:</P>
+<P><IMG height=171 src="PPM-PCM coding in Futaba systems_arquivos/05.jpg" 
+width=497 border=0></P>
+<P><IMG height=166 src="PPM-PCM coding in Futaba systems_arquivos/06.jpg" 
+width=494 border=0></P>
+<P><IMG height=170 src="PPM-PCM coding in Futaba systems_arquivos/07.jpg" 
+width=493 border=0></P>
+<P><IMG height=166 src="PPM-PCM coding in Futaba systems_arquivos/08.jpg" 
+width=494 border=0></P>
+<P>Channel 3 is moved:</P>
+<P><IMG height=163 src="PPM-PCM coding in Futaba systems_arquivos/09.jpg" 
+width=493 border=0></P>
+<P><IMG height=166 src="PPM-PCM coding in Futaba systems_arquivos/10.jpg" 
+width=493 border=0></P>
+<P>Channel 4 is moved (also Ch3 changes):</P>
+<P><IMG height=174 src="PPM-PCM coding in Futaba systems_arquivos/13.jpg" 
+width=494 border=0></P>
+<P><IMG height=169 src="PPM-PCM coding in Futaba systems_arquivos/14.jpg" 
+width=494 border=0></P>
+<P><IMG height=169 src="PPM-PCM coding in Futaba systems_arquivos/15.jpg" 
+width=495 border=0></P>
+<P>For further tests I have to purchase a digital input card (from National 
+Instruments etc.) or make myself some sort of special system to analyze the info 
+(with MCU perhaps).</P>
+<HR>
+
+<P><FONT size=2>If you do not have the contents frame on the left side of the 
+screen, then please <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/index.htm" target=_top>click 
+this link</A>.</FONT></P></BODY></HTML>

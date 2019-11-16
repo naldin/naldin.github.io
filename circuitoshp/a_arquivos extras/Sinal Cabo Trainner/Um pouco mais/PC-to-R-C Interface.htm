@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.mh.ttu.ee/risto/rc/electronics/pctorc.htm -->
+<HTML><HEAD><TITLE>PC-to-R/C Interface</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=Content-Language content=en-us>
+<STYLE>A:hover {
+	COLOR: red
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY background="PC-to-R-C Interface_arquivos/electron.jpg" 
+stylesrc="main.htm">
+<H2 align=center>PC-to-R/C Interface</H2>
+<P>&nbsp;</P>
+<P>I needed a cheap system for controlling robots remotely and at a time I did 
+not know any readily available systems with reasonable price tag so decided to 
+build one myself. <FONT size=2>Later I discovered one system (<I>PDC01</I>) for 
+a good price from <A href="http://www.u-nav.com/">http://www.u-nav.com/</A>. I 
+didn't purchase it though, as my own design is more advanced.</FONT></P>
+<P>I based my design on top of standard R/C model radio equipment. My idea was 
+to use R/C model servos controlled by standard R/C receiver as the actuators in 
+the robot. On the transmitter side the control input would be fed by personal 
+computer instead of moving sticks on the R/C model transmitter. For getting the 
+signal from computer to R/C transmitter, I had to design this interface.</P>
+<P>I used FUTABA system which I already had, but I can imagine this design to 
+need only minor changes when using other brand systems.&nbsp;</P>
+<P><A href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/03.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/03.jpg" width=120 border=1></A> 
+</P>
+<P>Most current model R/C equipments have DSC/Trainer socket. Pictured is the 
+back panel of <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/radio/tx.htm">ROBBE/FUTABA 
+<I>FC-28</I></A>, where you can see the DIN-6 trainer socket.</P>
+<P><IMG height=215 src="PC-to-R-C Interface_arquivos/pulse.gif" width=747 
+border=0></P>
+<P>The trainer interface sends all channels in sequence after which a 
+synchronization pulse is sent. In FUTABA terms this kind of modulation is called 
+PPM. Actually the same signal is in PPM systems also sent to RF-modulator. As 
+the program cycle is around 20 ms, the maximum signal update rate is approx 
+50Hz.</P>
+<P><IMG height=50 src="PC-to-R-C Interface_arquivos/ch1.gif" width=550 
+border=0></P>
+<P>From this picture the working principle of PPM can easily be understood. 
+Channel 1 is changed in 0,5ms steps from 1ms to 2ms. As you can notice, the 
+frame length actually changes a bit because of this. Take a look also at my <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/radio/signal.htm">PPM/PCM coding 
+page</A>.<BR>For excellent information about PPM/PCM modulation take a look at 
+<A href="http://www.aerodesign.de/peter/2000/PCM/PCM_PPM_eng.html" 
+target=_blank>Mr. Peter Rother</A> article (in German).</P>
+<P>NOTE! All low-pulses are the same constant width, and usually around 200µs. 
+Actually their duration is not critical - the channel is controlled only by the 
+time it takes for one full cycle to end (from high-front to another high-front), 
+so in principle you could have 50/50 cycle as well. If you are interested in 
+reading more about how R/C model radios work take a look at <A 
+href="http://www.torreypinesgulls.org/Radios.htm" target=_blank>Mr. Ian 
+Hirschsohn article</A>.</P>
+<P>From the available 7 wires (6 + ground) on trainer interface, I only needed 
+to use three:</P>
+<OL>
+  <LI>supply voltage from R/C transmitter battery for powering the interface 
+  <LI>PPM signal for R/C transmitter (the required signal is pictured above) 
+  <LI>ground </LI></OL>
+<P>The maximum number of independent proportional channels allowed in 
+<I>FC-28</I> trainer interface is 8 (that is usually the limit of all PPM 
+systems). Note that more secure PCM modulation can still be used as the coding 
+type between R/C transmitter and receiver.</P>
+<P><A href="http://www.mh.ttu.ee/risto/rc/images/fc28/lcd/08.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/08.jpg" width=238 border=1></A></P>
+<P>Advanced R/C system trainer menu looks similar to the shown. In modeling two 
+transmitters are hooked up with cable. One of them is configured as teacher and 
+the other as student. The actual radio transmission happens on the teacher 
+transmitter, while the students RF-module is turned off. In our case the R/C 
+model transmitter will be working in teacher mode. It will also have a master 
+switch - so the control can be overridden by standard model transmitter sticks 
+and switches. The rate setting is useful while teaching R/C modeling, where the 
+student might have smoother handling of the model when not allowed full control 
+at first. In my computer control application I did not need this feature, so all 
+channels from trainer were given full 100% control range.</P>
+<P>Designed interface receives data from computer and sends out the required PPM 
+signal for R/C model transmitter. For interfacing with PC I chose the standard 
+25-pin parallel port. I am using self-made software written in BORLAND 
+<I>Delphi</I> that operates under any MICROSOFT <I>Windows</I> platform 
+including <I>Windows NT 4.0</I> and <I>Windows 2000</I>.<BR>Currently the 
+software is very much specified for my own applications; I'll make it available, 
+when I have made it to be for more general use.</P>
+<P><A href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/04.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/04.jpg" width=71 border=1></A> <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/05.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/05.jpg" width=70 border=1></A> </P>
+<P>I start by explaining the <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/pctorc.gif">schematics</A>. 
+Software running in PC updates eight U1-U8 (<I>74HCT573</I>) 8-bit D-type 
+latches, which hold the position of each channel (U1 for channel 1, U2 for 
+channel 2 and so on). Every channel's position is described by one byte 
+(8-bits), from 0h to FFh. If using standard R/C servo, then 0h (=0) would 
+correspond to one extreme and FFh (=255) to another, while 7Fh (=127) being the 
+center. More technically speaking 0h will generate 1ms pulse, FFh 2ms pulse. 
+From this you can also conclude, that the channel resolution is 256.</P>
+<P>U9 (<I>74HCT541</I>) is connected to PC parallel port data pins just for 
+buffering. Software selects the latch to update via parallel port control pins 
+that are connected to BCD decoder U10 (<I>74HCT42</I>). U11 (<I>74HCT563</I>) 
+works as octal inverter. If none of the U10 output bits 0-7 (pins 1-7 and 9) are 
+activated, then no latch is updated at the time. This mode is also used while 
+changing the state of data lines to avoid errors.<BR>To illustrate this more 
+clearly - if software wants to update any latch, then it must perform next 
+actions:</P>
+<OL>
+  <LI>disable all U10 bit 0-7 outputs (8 or 9 can be but are not required to be 
+  active) 
+  <LI>puts the correct channel position into data lines (updating U9) 
+  <LI>enables the latch by activating the correct bit on U10 (from 0-7) 
+  <LI>disable all U10 bit 0-7 outputs (8 or 9 can be but are not required to be 
+  active) </LI></OL>
+<P>The computer can update any of the eight latches at any time and at any 
+order. It is also not required to update the latches continuously - so only the 
+ones that need to be updated with new position data are processed.</P>
+<P><A href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/06.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/06.jpg" width=150 border=1></A> 
+</P>
+<P>For getting the required PPM signal from data on latches 10MHz 
+<I>PIC16F84</I> (U12) from <A href="http://www.microchip.com/" 
+target=_blank>MICROCHIP</A> is used. Latches U1-U8 tri-state outputs are 
+connected to a bus, which is fed to U12 Port.B. U12 uses Port.A pins 0-3 to 
+activate via BCD decoder U13 (<I>74HCT42</I>) one latch at a time to output its 
+data to the bus. U12 can read any of the latches at any time, even the ones that 
+are updated currently by PC. I have counted on the fact that the time it takes 
+for U12 to read the latch signals is so small compared to the latch update 
+sequence by computer via parallel port that no changes occur during this period. 
+Even if there should be error in reading the bus (simultaneous writing by PC and 
+reading by PIC), then the probability that on next cycle there would be error 
+reading the same channel is extremely low. One glitch on the other hand is so 
+short (1/50 ms) that normal mechanical systems like servos do not have time to 
+react to it anyway.<BR><FONT size=2><I>After building and testing the circuit 
+thoroughly I have found this not to be a problem at all.</I></FONT></P>
+<P>U12 Port.A bit4 is used for feeding the signal to the R/C equipment. R1 needs 
+to be used, because Port.A bit4 is open-drain type output. <I>DTC144</I> is used 
+for inverting the signal for <I>BC547</I>, which makes the signal to be in the 
+required voltage range.</P>
+<P>I have used <A href="http://www.melabs.com/" target=_blank>microEngineerig 
+Labs</A> <I>PicBasic Pro</I> compiler to write the software for 
+U12.<BR>Commented source-code written to be compiled in <I>PIC Basic</I> can be 
+seen: <A href="http://www.mh.ttu.ee/risto/files/PCtoRC.bas">PCTORC.BAS</A></P>
+<P><A href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/07.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/07.jpg" width=80 border=1></A></P>
+<P>For downloading the compiled code <A 
+href="http://www.mh.ttu.ee/risto/files/PCTORC.HEX">PCTORC.HEX</A> into U12, I 
+used <A href="http://www.microchip.com/" target=_blank>MICROCHIP</A> <I>PicStart 
+Plus</I> programmer and MICROCHIP <I>MPLAB</I> software.</P>
+<P><A href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/01.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/01.jpg" width=144 border=1></A> <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/images/pctorc/02.jpg"><IMG 
+height=100 src="PC-to-R-C Interface_arquivos/02.jpg" width=90 border=1></A> </P>
+<P>This is how the interface looks without casing. It draws power from R/C 
+transmitter, so no external power supply is required.</P>
+<HR>
+
+<P><FONT size=2>If you do not have the contents frame on the left side of the 
+screen, then please <A 
+href="http://www.mh.ttu.ee/risto/rc/electronics/index.htm" target=_top>click 
+this link</A>.</FONT></P></BODY></HTML>

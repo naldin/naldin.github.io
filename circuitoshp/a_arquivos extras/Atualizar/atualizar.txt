@@ -1,0 +1,20 @@
+Colocar ATUALIZAÇõES
+Colocar em cabos de simuladores, porta: serial,joystick, paralela, etc.
+http://www.dreamfree.hpg.ig.com.br/serial.htm - conecta o dreamcast no computador.
+http://myweb.absa.co.za/eric.brouwer/radio_connections.htm - pinagem trainner
+http://www.circuitoshp.hpg.ig.com.br/celular/cabodau9p/cabodau9p.htm - retirar banner ML
+http://www.celulartech.150m.com/
+Atualizar link do CD para Celular
+Segundo Banner na pagina link com defeito
+Faça um cabo serial para usar o controle JR no simulador FMS - retirar link do ML
+No cabo SmartPropo no final tá "Ultilizando" e é "Utilizando"
+"""Siatema""" de Loudness com pre - em SONS
+"""Exelente""" antena para transmissor de Fm - em Trans FM/VHF
+Projeto de booster FM/VHF
+Manuais de radios JR agora é: http://horizon.hobbyshopnow.com/products/jr.asp - após escolher o radio vá na aba SUPPORT
+http://www.airtronics.net/2003_manuals.htm - manuais Airtronics
+http://www.hitecrcd.com/Radios/RadioHome.htm - manuais Hitec
+Passar para o Portugues:
+<TD><INPUT TYPE="SUBMIT" VALUE="Search" name="SEARCH"></TD></TR>
+<TR><TD></TD><TD ALIGN=RIGHT><SELECT NAME="opt"><OPTION SELECTED VALUE="ANY">Find ANY word  <OPTION VALUE="ALL">Find ALL words&nbsp; <OPTION VALUE="EXACT">Find EXACT phrase&nbsp; </SELECT></TD><TD ALIGN=LEFT><FONT SIZE=-2>&nbsp;&nbsp;<A HREF="">Help</A></FONT></TD></TR>
+e atlualizar o DB do PicoSearch

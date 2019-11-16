@@ -1,0 +1,111 @@
+24/06/2001
+
+Submarino:
+Código de afiliado : 105159
+Senha :****
+
+SUBMARINO
+
+CDs >> CDs, Brinquedos, Games, DVD/Vídeo: 4%
+<p align="center"><a href="http://www.submarino.com.br/cds.asp?Query=ProductPage&ProdTypeId=2&franq=105159" target="_blank">
+<img src="http://afiliados.submarino.com.br/afiliados/banner/mapa_cd.gif" width="468" height="60" border="0"></a>
+
+DVDs >> CDs, Brinquedos, Games, DVD/Vídeo: 4%
+<p align="center"><a href="http://www.submarino.com.br/dvds.asp?Query=MixProductPage&ProdTypeId=6&franq=105159" target="_blank">
+<img src="http://afiliados.submarino.com.br/afiliados/banner/mapa_dvd_468x60.gif" width="468" height="60" border="0"></a> 
+
+ELETRONICOS >> Produtos Eletrônicos: 2%
+<p align="center"><a href="http://www.submarino.com.br/electronic.asp?Query=ProductPage&ProdTypeId=13&franq=105159" target="_blank"> 
+<img src="http://afiliados.submarino.com.br/afiliados/banner/eletro_full.gif" width="468" height="60" border="0"></a>
+
+ELETRO-PORTATEIS >> Produtos Eletrônicos: 2%
+<p align="center"><a href="http://www.submarino.com.br/local/electronic/electronic_portateis_marcas.asp?Query=ProductPage&ProdTypeId=13&Top3rdRowKey=931&TEMPLATEID=HEADER&franq=105159" target="_blank"> 
+<img src="http://afiliados.submarino.com.br/afiliados/banner/eletroportateis_full.gif" width="468" height="60" border="0"></a> 
+
+LIVROS >> Livros Nacionais: 8% / Livros Importados: 4%
+<p align="center"><p align="center"><a href="http://www.submarino.com.br/books.asp?Query=ProductPage&ProdTypeId=1&franq=105159" target="_blank">
+<img src="http://afiliados.submarino.com.br/afiliados/banner/mapa_livros.gif" width="468" height="60" border="0"></a>
+
+*************************************************************************************
+
+Ibazar:
+Código de Associado : XK141414
+senha :****
+
+<A HREF="http://www.ibazar.com.br/index.cgi?XK141414">
+<IMG SRC="ban_ibazar1.gif" border=0>
+</A>
+
+<A HREF="http://www.ibazar.com.br/index.cgi?XK141414">
+<IMG SRC="ban_ibazar2.gif" border=0>
+</A>
+*************************************************************************************
+
+Mercado Livre:
+Código de Associado: alzoal
+senha:****
+
+ <SCRIPT language="JavaScript">
+document.write('<table width="120" height="190" border="1" cellspacing="0" cellpadding="0" bordercolor="#CCCCCC" bgcolor="#FFFFFF"><tr><td>');
+document.write(' <table><tr>');
+document.write('<td align="center" valign="middle">');
+if (navigator.appName=="Netscape"){
+document.write('<img src="http://www.mercadolibre.com/org-img/ticker/FLASH/logo_foto_bra.gif" width="90" height="90"></td></tr>');} else {
+document.write('<a NAME=anchor52766 href="http://www.mercadolibre.com" target="_blank"><img name =img52766 src="http://www.mercadolibre.com/org-img/ticker/FLASH/logo_foto_bra.gif" width="90" height="90" border=0 ></a></td></tr>');}
+document.write('<tr><td><div align="center"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="110" height="70" ID=swf52766>');
+document.write('<param name=movie value="http://www.mercadolibre.com/org-img/ticker/FLASH/institucional_bra.swf?cust_id=4654524&aff_site=52766">');
+document.write('<param name=quality value=high>');
+document.write('<embed NAME=swf52766 swLiveConnect="true" src="http://www.mercadolibre.com/org-img/ticker/FLASH/institucional_bra.swf?cust_id=4654524&aff_site=52766" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="110" height="70"></embed>');
+document.write('</object></div></td></tr></table></td></tr>');
+document.write('<tr>');
+document.write('<td bgcolor="fee600" align="center"><img src="http://www.mercadolibre.com/org-img/ticker/FLASH/logo_bra.gif"></td></tr></table>');
+
+function swf52766_DoFSCommand(command, args)
+{                
+  if ( command == "foto" ) {                            
+      document["img52766"].src= args;}
+  if ( command == "link" ) {                          
+     for(a=0;a<=document.links.length-1;a++) {  
+         if(document.links[a].name == "anchor52766"){
+  	    document.links[a].href=args; } } }
+}
+</SCRIPT>
+
+<SCRIPT LANGUAGE="VBScript">
+Sub swf52766_FSCommand(ByVal command, ByVal args)
+    call swf52766_DoFSCommand(command, args)
+end sub
+</SCRIPT> 
+
+
+<a href=http://www.mercadolivre.com.br/brasil/ml/pms?site=52766&id=1155&go=CA target="_blank">
+<img border=0 src=http://pms.mercadolibre.com/cgi/pms/ban?site=52766&id=1155>
+<br><font face="Verdana, Arial" size="1">
+Participe dos melhores negócios na Internet<BR>visitando MercadoLivre.com
+</font>
+</a>
+
+<table><tr><td align=center>
+<a href=http://www.mercadolivre.com.br/brasil/ml/pms?site=52766&id=1155&go=CA target="_blank">
+<img border=0 src=http://pms.mercadolibre.com/cgi/pms/ban?site=52766&id=1155>
+<br><font face="Verdana, Arial" size="1">
+Participe dos melhores negócios na Internet<BR>visitando MercadoLivre.com
+</font>
+</a></td></tr></table>
+
+************************************************************************************
+
+Banner-Link:
+Codigo: 12445
+Senha:****
+
+<p align="center">&nbsp;
+<a href=http://www.mercadolivre.com.br/brasil/ml/pms?site=52766&id=1155&go=CA target="_blank">
+<img border=0 src=http://pms.mercadolibre.com/cgi/pms/ban?site=52766&id=1155>
+<br><font face="Verdana, Arial" size="1">
+Participe dos melhores negócios na Internet<BR>visitando MercadoLivre.com
+</font>
+</a>
+
+<p align="center"><a href="http://www.ibazar.com.br/index.cgi?XK141414" target="_blank"><img border="0" src="ban_ibazar1.gif" width="468" height="60"></a>
+

@@ -1,0 +1,80 @@
+<html>
+<head>
+<TITLE>[[((((CIRCUITOS HP))))]]
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;http://circuitoshp.cjb.net --- FMS - Free Flying Model Simulator</TITLE>
+</head>
+<BODY bgcolor="#000000" text="#00FFFF" link="#00FFFF" vlink="#C0C0C0">
+<CENTER>
+<p>&nbsp;</p>
+<font size="4"><b>Para fazer o download do programa va em um dos links abaixo!</font></b></a></b></p>
+<p><b><font size="4">Esquema do cabo retirado da pagina: <a href="http://www.geocities.com/victor55canada/" target="_blank">http://www.geocities.com/victor55canada/</a> e traduzido por Circuitos HP</font></b></p>
+
+<p><b><font size="4">Pagina oficial do simulador: <a href="http://n.ethz.ch/student/mmoeller/fms/" target="_blank">http://n.ethz.ch/student/mmoeller/fms/</a></font></b></p>
+
+<p><b>Abaixo tem o esquema de como se fazer um cabo para ligar o controle no
+computador, pela porta paralela.</b></p>
+<table borders="0" width="100%">
+<tr>
+<td align=RIGHT><hr width=200></td><td align=CENTER><h3>Interface para o FMS</h3></td>
+<td align=LEFT><hr width=200></td>
+</tr>
+</table>
+<img src="interface9.jpg" border=5>
+</center></p>
+<h3>Items eletrônicos necessários</h3>
+<ul><pre>
+01 Transistor NPN 2222 (Varios transistores NPN funcionam)
+01 Resistor 10k-Ohm 1/2 watt 5% 
+01 Conector DB-25 Macho
+01 Capa para conector DB-25
+-------------------------------------------------------------------
+01 Conector de 6 pinos DIN macho (Para conexões FUTABA)
+03 Metros de fios (Eu usei cabos de autofalantes !)
+ OU
+01 Mini-plug Mono (Para conxões JR)
+=======================
+Custo total: +/-  de US$4,00 a US$7,00
+</pre>
+</ul>
+<h3>Interface do transmissor</h3>
+<ul>
+<p><a href="mailto:rgosens@zonnet.nl">Rick G</a> desenvolveu uma interface muito simples para conectar seu transmissor à porta da impressora de seu computador.  Este esquema foi testado com radios Futaba. Eu acho que funciona no radio JR10X e em outros radios JR tambem.O melhor de tudo isso é que ele também funciona com o FMS! Aqui está o esquema da interface:<br>
+<h3>Esquema</h3>
+<center>
+<img src="Txint.gif" border=5>
+</center>
+<br>
+<h3>Interface Genérica</h3>
+<p>Este foi meu primeiro teste, funcionou, mas era obviamente difícil usar, pois tinha que encaixar as pontas dos fios nos buracos apropriados da minha porta paralela cada vez que queria usá-lo.</p>
+<br>
+<center>
+<img src="interface.jpg" border=2><br>Esquema do circuito.<br>
+<img src="trainerjack.jpg" border=2><br>Conexão no Rádio<br>
+<img src="trainercord.jpg" border=2><br>Conector FUTABA<br>
+<img src="parallelport.jpg" border=2><br>Conector da porta paralela do computador<br>
+</center>
+<h3>Interface Pronta</h3>
+<p>Esta é uma versão melhor da interface mostrada acima.  Aqui você pode ver que soldei o transistor diretamente aos pinos do conector da porta paralela.  Também comprei um conector DIN 6-pinos para o meu transmissor, note que eu liguei os dois pinos da direita.</p>  
+<br>
+<center>
+<img src="interface5.jpg" border=2><br>Boa visualização do circuito: transistor e resistência<br>
+<img src="interface7.jpg" border=2><br>Outro ângulo do mesmo circuito<br>
+<img src="interface8.jpg" border=2><br>Aqui o circuito já isolado para fechar a caixa.<br>
+<img src="interface6.jpg" border=2><br>
+É difícil ver, mas o cabo terra está soldado ao anel externo do conector (FUTABA).<br><br>
+<img src="interface9.jpg" border=2><br>A interface pronta.<br>
+</center>
+<p>O cabo <I>trainer</I> FUTABA possui um curto nele, isso provavelmente diz para o controle que existe um cabo <I>trainrer</I> conectado. Você pode (ainda não testei) precisar conectar um fio onde a linha verde é mostrada, para enganar o transmissor como se realmente existisse um cabo.
+<p><a href="http://www.heliguy.com/nexus/fms/Txint.exe">Utilitário de teste da interface para DOS</a> Use este programa para testar sua interface, você pode rodá-lo pelo windows.  Ele parecerá não fazer nada até que dê um sinal - será quando ele começará a contar como louco e todos os gráficos de barra devem se tornar unidos aos canais do seu controle.
+<p><font color="red">Para que o programa de teste funcione, seu transmissor deve estar em modo FM padrão (e NÃO PCM) e sua porta paralela deve ser configurada para usar a Porta de Impressora no IRQ 7 e I/O 378h.  Esta é a configuração padrão usada na maioria dos computadores.  Também, essa configuração não é a padrão para o FMS, você deve manualmente configurar a porta LPT para 378 dentro das configurações do transmissor do FMS para que ele funcione.
+</font>
+<br>
+<p><font color="red">Se você tiver uma placa de som PCI Soundblaster (e talvez outras placas) pode ser necessario desabilitar a placa no gerenciador de dispositivo. Eu fiz um upgrade de minha placa de audio recente e minha interface mostrava" sinal detectado " mas não mostrava nenhum movimento. Quando eu desabilitei a placa, ai sim funcionou bem. Agradecimentos a <a href="mailto:jerrysimon@lycosmail.com">Simon</a> que divulgou isto em meu forum .
+</font>
+<p>Nos transmissores FUTABA, o sinal é o pino superior esquerdo quando estamos olhando o conector do transmissor (Pino 2) e o pino de baixo do meio (no anel do conector) é o terra. </p>
+</ul>
+
+<hr>
+</body>
+</html> 
+<!-- This document source from http://www.heliguy.com/nexus/fmsinterface.html -->

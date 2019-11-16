@@ -1,0 +1,867 @@
+%!PS-Adobe-1.0
+%%Title: EAGLE Drawing RCFSPICB
+%%Creator: EAGLE
+%%Pages: 1
+%%BoundingBox: 0 0 132 318
+%%EndComments
+% EAGLE  PostScript Driver  Version 2.61  (c) 1988,92 CadSoft
+
+/mil { 0.072 mul } def
+
+/inch { 72 mul } def
+
+% the real drawing size and desired scale factor:
+
+/MinDrawX    -85 mil def
+/MinDrawY   -343 mil def
+/MaxDrawX   1743 mil def
+/MaxDrawY   4075 mil def
+/ScaleFac  1.0000 def
+/CorrectX  1.0000 def  % to correct machine tolerances
+/CorrectY  1.0000 def
+
+% the usable page size:
+
+/LeftMargin  0.2500 inch def  % change these if drawing gets clipped!
+/BotMargin   0.2500 inch def
+/PageWidth   7.7500 inch def
+/PageHeight 11.0000 inch def
+
+% are we going to rotate?:
+
+/RotateDrawing false def
+
+/AbortMessage {  % Show a message in a box and stop printing
+   /h 100 def
+   /Courier findfont 12 scalefont setfont
+   mediawidth pagemargin sub h 1 setpage
+   newpath
+   0 0 moveto
+   0 h rlineto
+   mediawidth pagemargin sub 0 rlineto
+   0 h neg rlineto
+   closepath
+   5 setlinewidth
+   stroke
+   newpath 50 60 moveto (ERROR: Jobsize exceeds physical printing area!) show
+   newpath 50 40 moveto (       Job has been aborted!) show
+   showpage
+   stop
+   } def
+
+/SelectPage {  % Select the page identified by Row and Column
+   /Column exch def
+   /Row    exch def
+
+   % the actually exposed area (if the machine knows these parameters!):
+
+   /DrawX MaxDrawX MinDrawX sub ScaleFac CorrectX mul mul def
+   /DrawY MaxDrawY MinDrawY sub ScaleFac CorrectY mul mul def
+   statusdict /setpage known
+   statusdict /mediawidth known and
+   statusdict /medialength known and
+   statusdict /pagemargin known and {
+      % this is for machines that can tell the media size:
+      statusdict begin
+         /MediaW mediawidth pagemargin sub def
+         DrawX DrawY ge {
+            DrawX MediaW le DrawY medialength le and {
+               MediaW DrawY 1 setpage
+               MediaW DrawX sub 2 div 0 translate
+               }{
+            DrawY MediaW le DrawX medialength le and {
+               MediaW DrawX 0 setpage
+               0 MediaW DrawY sub 2 div translate
+               }{
+               AbortMessage
+               } ifelse
+               } ifelse
+            }{
+            DrawY MediaW le DrawX medialength le and {
+               MediaW DrawX 0 setpage
+               0 MediaW DrawY sub 2 div translate
+               }{
+            DrawX MediaW le DrawY medialength le and {
+               MediaW DrawY 1 setpage
+               MediaW DrawX sub 2 div 0 translate
+               }{
+               AbortMessage
+               } ifelse
+               } ifelse
+            } ifelse
+         end
+      }{
+      % this is for machines that can NOT tell the media size:
+      statusdict /setpage known {
+         statusdict begin
+            RotateDrawing {
+               LeftMargin PageHeight add BotMargin DrawY add
+               }{
+               BotMargin DrawY add LeftMargin DrawX add 
+               } ifelse
+            0 setpage
+            end
+         } if
+      % set clipping boundary:
+      newpath
+      LeftMargin BotMargin moveto
+      0 PageHeight rlineto
+      PageWidth  0 rlineto
+      0 PageHeight neg rlineto
+      closepath
+      clip
+      % set the origin:
+      LeftMargin BotMargin translate
+      RotateDrawing {
+         0 PageHeight translate
+         -90 rotate
+         PageHeight Column mul neg PageWidth Row mul neg translate
+         }{
+         PageWidth Column mul neg PageHeight Row mul neg translate
+         } ifelse
+      } ifelse
+
+   % set the scale factor:
+
+   ScaleFac CorrectX mul ScaleFac CorrectY mul scale
+
+   % move the lower left corner of the drawing to the origin:
+
+   MinDrawX neg MinDrawY neg translate
+
+   % define the linestyle:
+
+   1 setlinecap
+   1 setlinejoin
+   } def
+
+/l {  % draw a line
+   /lw exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 mil y1 mil moveto
+   x2 mil y2 mil lineto
+   lw mil setlinewidth
+   stroke
+   } def
+
+/h {  % draw a hole
+   /d  exch def
+   /y  exch def
+   /x  exch def
+   d 0 gt {
+     newpath
+     x mil y mil d 2 div mil 0 360 arc
+     currentgray dup
+     1 exch sub setgray
+     fill
+     setgray
+     } if
+   } def
+
+/b {  % draw a bar
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 mil y1 mil moveto
+   x2 mil y1 mil lineto
+   x2 mil y2 mil lineto
+   x1 mil y2 mil lineto
+   closepath
+   fill
+   } def
+
+/c {  % draw a circle
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   lw mil setlinewidth
+   x mil y mil rd mil 0 360 arc
+   stroke
+   } def
+
+/a {  % draw an arc
+   /ae exch def
+   /as exch def
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   currentlinecap currentlinejoin
+   0 setlinecap 0 setlinejoin
+   newpath
+   lw mil setlinewidth
+   x mil y mil rd mil as ae arc
+   stroke
+   setlinejoin setlinecap
+   } def
+
+/s {  % draw a square with a hole
+   /di exch def
+   /da exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   x da 2 div sub mil y da 2 div sub mil moveto
+   da mil  0 mil rlineto
+   0  mil da mil rlineto
+   da neg mil 0 mil rlineto
+   closepath
+   fill
+   x y di h
+   } def
+
+/p {  % draw a pie with a hole
+   /di exch def
+   /da exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   x mil y mil da 2 div mil 0 360 arc
+   fill
+   x y di h
+   } def
+
+/edge { 0.20710678119 mul } def
+
+/o {  % draw an octagon with a hole
+   /di exch def
+   /dy exch def
+   /dx exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   dx dy ge {
+      x dx 2 div sub mil                    y dy edge  add mil moveto
+      x dx dy sub 2 div sub dy edge sub mil y dy 2 div add mil lineto
+      x dx dy sub 2 div add dy edge add mil y dy 2 div add mil lineto
+      x dx 2 div add mil                    y dy edge  add mil lineto
+      x dx 2 div add mil                    y dy edge  sub mil lineto
+      x dx dy sub 2 div add dy edge add mil y dy 2 div sub mil lineto
+      x dx dy sub 2 div sub dy edge sub mil y dy 2 div sub mil lineto
+      x dx 2 div sub mil                    y dy edge  sub mil lineto
+      } if
+   dx dy lt {
+      x dx edge  add mil y dy 2 div add mil                    moveto
+      x dx 2 div add mil y dy dx sub 2 div add dx edge add mil lineto
+      x dx 2 div add mil y dy dx sub 2 div sub dx edge sub mil lineto
+      x dx edge  add mil y dy 2 div sub mil                    lineto
+      x dx edge  sub mil y dy 2 div sub mil                    lineto
+      x dx 2 div sub mil y dy dx sub 2 div sub dx edge sub mil lineto
+      x dx 2 div sub mil y dy dx sub 2 div add dx edge add mil lineto
+      x dx edge  sub mil y dy 2 div add mil                    lineto
+      } if
+   closepath
+   fill
+   x y di h
+   } def
+
+% TheDrawing (page 1 of 1)
+
+gsave
+0 0 SelectPage
+1733 379 1733 3320 0 l
+1 3320 1 380 0 l
+1 380 379 380 0 l
+379 0 379 380 0 l
+1733 379 1353 379 0 l
+1353 0 1353 379 0 l
+1353 0 379 0 0 l
+1 3320 379 3320 0 l
+379 3701 379 3320 0 l
+1733 3320 1353 3320 0 l
+1353 3701 1353 3320 0 l
+1353 3701 379 3701 0 l
+50 1250 400 1700 b
+50 1150 225 1275 b
+175 1175 275 1275 b
+250 1225 300 1300 b
+% C.J. 10.94
+240 1999 248 1992 4 l
+248 1992 248 1976 4 l
+248 1976 240 1969 4 l
+240 1969 209 1969 4 l
+209 1969 202 1976 4 l
+202 1976 202 1992 4 l
+202 1992 209 1999 4 l
+202 2015 209 2015 4 l
+209 2015 209 2022 4 l
+209 2022 202 2022 4 l
+202 2022 202 2015 4 l
+248 2083 248 2068 4 l
+248 2068 248 2076 4 l
+248 2076 209 2076 4 l
+209 2076 202 2068 4 l
+202 2068 202 2060 4 l
+202 2060 209 2053 4 l
+202 2099 209 2099 4 l
+209 2099 209 2106 4 l
+209 2106 202 2106 4 l
+202 2106 202 2099 4 l
+202 2183 202 2198 4 l
+202 2198 202 2190 4 l
+202 2190 248 2190 4 l
+248 2190 248 2190 4 l
+248 2190 240 2183 4 l
+240 2221 248 2228 4 l
+248 2228 248 2244 4 l
+248 2244 240 2251 4 l
+240 2251 209 2251 4 l
+209 2251 202 2244 4 l
+202 2244 202 2228 4 l
+202 2228 209 2221 4 l
+209 2221 240 2221 4 l
+202 2267 209 2267 4 l
+209 2267 209 2274 4 l
+209 2274 202 2274 4 l
+202 2274 202 2267 4 l
+209 2305 202 2312 4 l
+202 2312 202 2328 4 l
+202 2328 209 2335 4 l
+209 2335 240 2335 4 l
+240 2335 248 2328 4 l
+248 2328 248 2312 4 l
+248 2312 240 2305 4 l
+240 2305 232 2305 4 l
+232 2305 225 2312 4 l
+225 2312 225 2335 4 l
+202 2374 248 2374 4 l
+248 2374 225 2351 4 l
+225 2351 225 2381 4 l
+%
+% RCFSpic
+127 1977 173 1977 4 l
+173 1977 173 2000 4 l
+173 2000 165 2007 4 l
+165 2007 150 2007 4 l
+150 2007 142 2000 4 l
+142 2000 142 1977 4 l
+142 1992 127 2007 4 l
+165 2053 173 2046 4 l
+173 2046 173 2030 4 l
+173 2030 165 2023 4 l
+165 2023 134 2023 4 l
+134 2023 127 2030 4 l
+127 2030 127 2046 4 l
+127 2046 134 2053 4 l
+173 2099 173 2069 4 l
+173 2069 150 2069 4 l
+150 2069 150 2084 4 l
+150 2084 150 2069 4 l
+150 2069 127 2069 4 l
+165 2145 173 2138 4 l
+173 2138 173 2122 4 l
+173 2122 165 2115 4 l
+165 2115 157 2115 4 l
+157 2115 150 2122 4 l
+150 2122 150 2138 4 l
+150 2138 142 2145 4 l
+142 2145 134 2145 4 l
+134 2145 127 2138 4 l
+127 2138 127 2122 4 l
+127 2122 134 2115 4 l
+111 2161 157 2161 4 l
+157 2161 157 2184 4 l
+157 2184 150 2191 4 l
+150 2191 134 2191 4 l
+134 2191 127 2184 4 l
+127 2184 127 2161 4 l
+127 2207 127 2222 4 l
+127 2222 127 2214 4 l
+127 2214 157 2214 4 l
+157 2214 157 2207 4 l
+173 2214 173 2214 4 l
+157 2275 157 2252 4 l
+157 2252 150 2245 4 l
+150 2245 134 2245 4 l
+134 2245 127 2252 4 l
+127 2252 127 2275 4 l
+%
+1250 825 1550 1050 b
+1250 700 1550 775 b
+50 2400 400 2600 b
+1263 3383 55 55 28 o
+1153 3383 55 55 28 o
+1043 3383 55 55 28 o
+933 3383 55 55 28 o
+823 3383 55 55 28 o
+713 3383 55 55 28 o
+603 3383 55 55 28 o
+493 3383 55 55 28 o
+1208 3483 55 55 28 o
+1098 3483 55 55 28 o
+988 3483 55 55 28 o
+878 3483 55 55 28 o
+768 3483 55 55 28 o
+658 3483 55 55 28 o
+548 3483 55 55 28 o
+1533 3433 63 0 c
+223 3433 63 0 c
+1533 3433 25 15 c
+223 3433 25 15 c
+645 349 55 55 28 o
+755 349 55 55 28 o
+865 349 55 55 28 o
+975 349 55 55 28 o
+1085 349 55 55 28 o
+700 249 55 55 28 o
+810 249 55 55 28 o
+920 249 55 55 28 o
+1030 249 55 55 28 o
+375 299 63 0 c
+1355 299 63 0 c
+375 299 25 15 c
+1355 299 25 15 c
+1050 1100 55 55 32 o
+1050 1200 55 55 32 o
+1050 1700 55 55 32 o
+1050 1800 55 55 32 o
+1050 1300 55 55 32 o
+1050 1400 55 55 32 o
+1050 1600 55 55 32 o
+1050 1500 55 55 32 o
+1050 1900 55 55 32 o
+750 1900 55 55 32 o
+750 1800 55 55 32 o
+750 1700 55 55 32 o
+750 1600 55 55 32 o
+750 1500 55 55 32 o
+750 1400 55 55 32 o
+750 1300 55 55 32 o
+750 1200 55 55 32 o
+750 1100 55 55 32 o
+1250 1150 55 55 32 o
+1350 1150 55 55 32 o
+1450 1150 55 55 32 o
+1550 1150 55 55 32 o
+1550 1450 55 55 32 o
+1450 1450 55 55 32 o
+1350 1450 55 55 32 o
+1250 1450 55 55 32 o
+1250 2650 55 55 32 o
+1350 2650 55 55 32 o
+1450 2650 55 55 32 o
+1550 2650 55 55 32 o
+1550 2950 55 55 32 o
+1450 2950 55 55 32 o
+1350 2950 55 55 32 o
+1250 2950 55 55 32 o
+1250 1650 55 55 32 o
+1350 1650 55 55 32 o
+1450 1650 55 55 32 o
+1550 1650 55 55 32 o
+1550 1950 55 55 32 o
+1450 1950 55 55 32 o
+1350 1950 55 55 32 o
+1250 1950 55 55 32 o
+1250 2150 55 55 32 o
+1350 2150 55 55 32 o
+1450 2150 55 55 32 o
+1550 2150 55 55 32 o
+1550 2450 55 55 32 o
+1450 2450 55 55 32 o
+1350 2450 55 55 32 o
+1250 2450 55 55 32 o
+150 1050 50 50 26 o
+350 1050 50 50 26 o
+550 1000 55 55 28 o
+550 1400 55 55 28 o
+1025 800 55 55 28 o
+1425 800 55 55 28 o
+150 750 55 55 28 o
+150 950 55 55 28 o
+325 750 55 55 28 o
+325 950 55 55 28 o
+550 750 50 50 28 o
+550 850 50 50 28 o
+1050 2250 55 55 28 o
+1150 2250 55 55 28 o
+1650 1000 55 55 28 o
+1550 1000 55 55 28 o
+550 1500 55 55 28 o
+550 1900 55 55 28 o
+1150 1400 55 55 28 o
+1150 1000 55 55 28 o
+484 2243 75 150 32 o
+602 2125 75 150 32 o
+740 2203 75 150 32 o
+484 2693 75 150 32 o
+602 2575 75 150 32 o
+740 2653 75 150 32 o
+484 3143 75 150 32 o
+602 3025 75 150 32 o
+740 3103 75 150 32 o
+851 626 150 75 32 o
+851 726 150 75 32 o
+851 826 150 75 32 o
+295 551 42 0 c
+295 551 25 15 c
+1417 551 42 0 c
+1417 551 25 15 c
+217 3150 42 0 c
+217 3150 25 15 c
+1516 3150 42 0 c
+1516 3150 25 15 c
+225 2750 62 62 39 o
+225 1750 62 62 39 o
+1030 271 1029 404 16 l
+1050 425 1029 404 16 l
+750 1076 750 1020 16 l
+750 1000 56 56 24 o
+975 1000 56 56 24 o
+1100 850 1100 725 16 l
+1050 675 1100 725 16 l
+1050 675 1050 425 16 l
+975 980 975 975 16 l
+975 975 1100 850 16 l
+1000 175 950 225 16 l
+1150 175 1000 175 16 l
+950 225 937 235 16 l
+1150 175 1150 850 16 l
+1050 950 1050 1076 16 l
+1150 850 1050 950 16 l
+874 127 812 187 16 l
+900 125 874 127 16 l
+1200 125 900 125 16 l
+1100 1150 1100 950 16 l
+1067 1183 1100 1150 16 l
+812 187 811 227 16 l
+1100 950 1200 850 16 l
+1200 850 1200 125 16 l
+726 1200 700 1200 16 l
+675 1175 700 1200 16 l
+675 1175 675 970 16 l
+675 950 56 56 24 o
+675 475 56 56 24 o
+712 268 726 291 16 l
+726 291 777 291 16 l
+811 328 777 291 16 l
+811 328 811 439 16 l
+775 475 811 439 16 l
+775 475 695 475 16 l
+768 3505 768 3518 16 l
+800 3550 768 3518 16 l
+800 3550 1155 3550 16 l
+1200 3411 1200 3000 16 l
+1200 3000 1600 3000 16 l
+1675 2925 1600 3000 16 l
+1675 2925 1675 1575 16 l
+1567 1467 1675 1575 16 l
+1200 3411 1154 3455 16 l
+1154 3455 1155 3550 16 l
+1043 3361 1043 2882 16 l
+1048 2845 1043 2882 16 l
+1050 2825 56 56 24 o
+1550 2845 1550 2926 16 l
+1550 2825 56 56 24 o
+734 3383 733 3383 14 l
+783 3434 733 3383 16 l
+783 3434 877 3435 16 l
+877 3435 875 3325 16 l
+925 3275 875 3325 16 l
+925 3275 925 2770 16 l
+925 2750 56 56 24 o
+1567 1967 1625 2025 16 l
+1625 2025 1625 2730 16 l
+1625 2750 56 56 24 o
+988 3461 988 2462 16 l
+875 2350 56 56 24 o
+1550 2370 1550 2426 16 l
+1550 2350 56 56 24 o
+988 2462 988 2463 16 l
+925 2400 988 2462 16 l
+925 2400 889 2364 16 l
+250 1050 350 1150 16 l
+166 1050 250 1050 16 l
+350 1150 500 1150 16 l
+500 1150 650 1300 16 l
+650 1300 726 1300 16 l
+150 984 150 1022 40 l
+450 1000 528 1000 16 l
+400 1050 450 1000 16 l
+366 1050 400 1050 16 l
+325 972 325 1025 16 l
+325 1025 339 1039 16 l
+726 1400 572 1400 16 l
+550 525 550 728 16 l
+950 800 950 525 16 l
+1003 800 950 800 16 l
+900 1300 1026 1300 16 l
+950 525 550 525 16 l
+950 800 950 900 16 l
+900 950 950 900 16 l
+900 950 900 1300 16 l
+1098 3461 1098 2702 16 l
+1100 2650 1098 2702 16 l
+764 2203 828 2203 16 l
+1050 2425 828 2203 16 l
+1050 2425 1050 2600 16 l
+1100 2650 1050 2600 16 l
+603 3369 603 3378 0 l
+400 3225 400 2850 16 l
+450 2800 400 2850 16 l
+600 2575 586 2575 0 l
+600 2575 600 2775 16 l
+575 2800 600 2775 16 l
+575 2800 450 2800 16 l
+603 3378 553 3378 16 l
+553 3378 400 3225 16 l
+1153 3361 1153 3203 16 l
+1158 3208 1153 3203 0 l
+1150 3200 56 56 24 o
+875 3200 56 56 24 o
+751 3124 752 3127 16 l
+750 3200 752 3127 16 l
+750 3200 855 3200 16 l
+733 1583 700 1550 16 l
+700 1550 700 1450 16 l
+700 1450 850 1450 16 l
+850 1450 850 900 16 l
+850 900 851 850 16 l
+600 1600 726 1600 16 l
+550 1522 550 1550 16 l
+550 1550 600 1600 16 l
+1128 1400 1074 1400 16 l
+1350 1300 1350 1174 16 l
+1300 1350 1350 1300 16 l
+1300 1600 1300 1350 16 l
+1333 1633 1300 1600 16 l
+1350 2075 1350 2126 16 l
+1314 2039 1350 2075 16 l
+1350 1700 1300 1750 16 l
+1350 1674 1350 1700 16 l
+1350 2550 1350 2626 16 l
+1300 2500 1350 2550 16 l
+1300 2250 1300 2500 16 l
+1350 2200 1300 2250 16 l
+1350 2174 1350 2200 16 l
+1300 1750 1300 2005 16 l
+774 1900 875 1900 16 l
+925 1950 875 1900 16 l
+925 1950 925 2005 16 l
+925 2025 56 56 24 o
+1300 2025 56 56 24 o
+1026 1600 1000 1600 16 l
+975 1575 1000 1600 16 l
+975 1575 975 1375 16 l
+1000 1350 975 1375 16 l
+1000 1350 1100 1350 16 l
+1150 1300 1100 1350 16 l
+1150 1300 1150 1200 16 l
+1200 1150 1150 1200 16 l
+1200 1150 1226 1150 16 l
+1026 1700 1000 1700 16 l
+1100 2505 1100 2225 16 l
+1000 2125 1000 1700 16 l
+1100 2525 56 56 24 o
+1250 2545 1250 2626 16 l
+1250 2525 56 56 24 o
+1000 2125 1100 2225 16 l
+1250 1800 1250 1674 16 l
+1074 1800 1250 1800 16 l
+1050 1924 1050 2055 16 l
+1050 2075 56 56 24 o
+1250 2095 1250 2126 16 l
+1250 2075 56 56 24 o
+1350 1525 1400 1575 16 l
+1400 1575 1400 1700 16 l
+1400 1700 1350 1750 16 l
+1350 1750 1350 1926 16 l
+1350 1974 1350 2000 16 l
+1350 2000 1400 2050 16 l
+1400 2050 1400 2200 16 l
+1400 2200 1350 2250 16 l
+1350 2250 1350 2426 16 l
+1350 2474 1350 2500 16 l
+1350 2500 1400 2550 16 l
+1400 2550 1400 2750 16 l
+1550 2674 1550 2750 16 l
+1500 2000 1500 1850 16 l
+1500 1350 1500 1500 16 l
+1650 1150 1601 1150 70 l
+1650 400 1650 951 70 l
+1300 400 1650 400 70 l
+1300 50 1300 400 70 l
+650 350 659 352 0 l
+750 350 650 350 70 l
+750 350 741 352 0 l
+650 725 815 726 40 l
+516 850 450 850 40 l
+450 750 450 850 40 l
+400 1750 400 1250 70 l
+50 800 50 1150 70 l
+50 800 100 750 70 l
+107 750 100 750 70 l
+282 750 193 750 70 l
+368 750 450 750 70 l
+450 750 450 500 70 l
+450 500 500 450 70 l
+500 50 500 350 70 l
+500 50 1300 50 70 l
+600 3100 601 3049 16 l
+1650 1049 1650 1150 70 l
+1550 2750 1400 2750 16 l
+600 3100 600 3271 70 l
+600 3271 775 3271 70 l
+1350 1525 1350 1474 16 l
+1550 2614 1550 2525 40 l
+1550 2525 1500 2475 16 l
+1500 2000 1550 2050 40 l
+1550 2050 1550 2114 40 l
+1500 2300 1500 2475 16 l
+1550 2186 1550 2250 40 l
+1550 2250 1500 2300 40 l
+650 350 500 350 70 l
+500 350 500 450 70 l
+650 725 650 850 40 l
+650 850 584 850 40 l
+823 3349 823 3327 40 l
+825 3325 823 3327 40 l
+825 3325 775 3271 40 l
+561 2125 550 2125 50 l
+475 2050 550 2125 70 l
+475 2050 400 2050 70 l
+602 2176 602 2252 70 l
+725 2375 602 2252 70 l
+740 2617 740 2615 40 l
+725 2600 740 2615 40 l
+725 2600 725 2375 70 l
+716 2653 728 2653 16 l
+725 2700 728 2653 16 l
+725 2700 725 2775 70 l
+725 2775 602 2898 70 l
+1011 2250 975 2250 50 l
+618 2107 627 2098 16 l
+675 2050 627 2098 50 l
+675 2050 800 2050 50 l
+268 1750 400 1750 70 l
+400 1750 400 2050 70 l
+50 1150 50 2625 70 l
+50 2625 400 2625 70 l
+400 2625 400 2050 70 l
+50 1150 225 1150 50 l
+400 1250 325 1250 70 l
+325 1250 225 1150 50 l
+182 1750 75 1750 70 l
+75 1750 75 1725 70 l
+586 3025 600 3025 0 l
+600 2975 600 3025 16 l
+600 2975 602 2898 70 l
+1400 2750 1400 2800 16 l
+1350 2850 1400 2800 16 l
+1350 2850 1350 2926 16 l
+975 2250 975 2225 50 l
+800 2050 975 2225 50 l
+1146 1500 1196 1450 16 l
+1196 1450 1196 1222 16 l
+1196 1222 1300 1222 16 l
+1300 1222 1300 1100 16 l
+1300 1100 1400 1100 16 l
+1400 1100 1400 1300 16 l
+1400 1300 1350 1350 16 l
+1350 1350 1350 1426 16 l
+1146 1500 1074 1500 16 l
+1550 1186 1550 1300 40 l
+1550 1300 1500 1350 40 l
+1500 1500 1550 1550 40 l
+1550 1550 1550 1614 40 l
+1500 1850 1550 1800 40 l
+1550 1800 1550 1686 40 l
+1175 2900 56 56 16 o
+1150 2250 56 56 16 o
+225 2750 100 100 16 o
+225 1750 100 100 16 o
+1150 1700 56 56 16 o
+325 750 70 70 16 o
+150 750 70 70 16 o
+150 1050 70 70 16 o
+350 1050 70 70 16 o
+1200 1050 1174 1024 40 l
+1550 675 1250 675 40 l
+1250 800 1250 675 40 l
+1250 800 1391 800 40 l
+1459 800 1550 800 40 l
+1550 800 1550 675 40 l
+1550 800 1550 966 40 l
+1550 1034 1550 1050 40 l
+1450 1050 1550 1050 40 l
+1450 2626 1450 2525 16 l
+1400 2475 1450 2525 16 l
+1400 2475 1400 2250 16 l
+1400 2250 1450 2200 16 l
+1450 2200 1450 2174 16 l
+1450 2050 1450 2126 16 l
+1400 2000 1450 2050 16 l
+1400 1800 1400 2000 16 l
+1400 1800 1450 1750 16 l
+1450 1674 1450 1750 16 l
+1450 1550 1450 1626 16 l
+1400 1500 1450 1550 16 l
+1400 1350 1400 1500 16 l
+1400 1350 1436 1314 16 l
+225 2783 225 2863 50 l
+1298 3418 1300 3420 70 l
+1300 3550 1300 3420 70 l
+1300 3550 1200 3650 70 l
+1200 3650 550 3650 70 l
+550 3650 400 3500 70 l
+400 3500 400 3350 70 l
+400 3350 350 3300 70 l
+350 2900 350 3300 40 l
+350 3300 50 3300 70 l
+50 3300 50 2900 70 l
+50 2900 178 2900 70 l
+257 2900 350 2900 40 l
+225 2900 70 70 24 o
+1225 2950 1217 2950 34 l
+1201 2926 1225 2950 50 l
+1175 2900 56 24 p
+1175 2863 1175 2450 50 l
+1214 2450 1175 2450 40 l
+1209 2450 1200 2450 50 l
+1150 2400 1200 2450 50 l
+1150 2400 1150 2283 50 l
+1150 2217 1150 2050 50 l
+1150 2050 1221 1979 50 l
+1226 1950 1170 1950 16 l
+1187 1950 1209 1950 50 l
+1150 1950 56 56 24 o
+1150 1700 40 40 24 o
+850 1500 774 1500 16 l
+550 1878 550 1700 16 l
+600 1650 550 1700 16 l
+850 1650 600 1650 16 l
+850 1650 850 1500 16 l
+850 1650 1150 1650 16 l
+1150 1650 1150 1663 50 l
+1150 1625 1150 1650 50 l
+1250 1525 1150 1625 50 l
+1250 1491 1250 1525 50 l
+1250 1409 1250 1337 50 l
+1250 1300 56 56 24 o
+1450 1300 56 56 24 o
+1450 1186 1450 1268 40 l
+1450 1114 1450 1050 40 l
+1450 1050 1250 1050 40 l
+1250 1050 1200 1050 40 l
+1250 1050 1250 675 40 l
+1250 675 1250 507 40 l
+1250 475 56 56 24 o
+950 475 56 56 24 o
+950 443 950 383 40 l
+899 349 941 349 40 l
+975 378 975 357 29 l
+946 386 949 383 70 l
+950 383 949 383 70 l
+949 383 975 357 40 l
+1450 1000 70 70 16 o
+950 2250 70 70 16 o
+showpage
+grestore

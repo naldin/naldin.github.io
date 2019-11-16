@@ -1,0 +1,1393 @@
+<HTML>
+<HEAD>
+<TITLE>TabelaRGB</TITLE>
+<STYLE>
+
+a:active{font-style		       	:	normal;
+		text-decoration	       	:	none;}
+		
+a:link	{font-style			       :	normal;
+		text-decoration		       :	none;}
+		
+a:visited{	text-decoration			:	none;
+		font-style			          :	normal;}
+		
+a:hover{text-decoration	    		:	normal;
+       color                      :   #CFB53B;
+                
+		font-style		           	:	normal;}
+</STYLE> 
+
+<base target="_self">
+</HEAD>
+
+
+
+<body background="../fundo.gif" bgproperties="fixed" bgcolor="#000000" text="#00FFFF" link="#00FFFF" vlink="#C0C0C0">
+
+<layer name="a0" left=10 top=10 visibility=show bgcolor="#ff0000" clip="0,0,2,2"></layer>
+<layer name="a1" left=10 top=10 visibility=show bgcolor="#ff8000" clip="0,0,2,2"></layer>
+<layer name="a2" left=10 top=10 visibility=show bgcolor="#ffff00" clip="0,0,2,2"></layer>
+<layer name="a3" left=10 top=10 visibility=show bgcolor="#00ff00" clip="0,0,2,2"></layer>
+<layer name="a4" left=10 top=10 visibility=show bgcolor="#0000ff" clip="0,0,2,2"></layer>
+<layer name="a5" left=10 top=10 visibility=show bgcolor="#ff00ff" clip="0,0,2,2"></layer>
+<layer name="a6" left=10 top=10 visibility=show bgcolor="#ffffff" clip="0,0,2,2"></layer>
+
+<div id="starsDiv" style="position:absolute;top:0px;left:0px">
+<div style="position:relative;width:2px;height:2px;background:#ffffff;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#ffff00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#fffa00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#ff0000;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#00ff00;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#0000ff;font-size:2px;visibility:visible"></div>
+<div style="position:relative;width:2px;height:2px;background:#FF00FF;font-size:2px;visibility:visible"></div>
+</div>
+
+<script language="JavaScript">
+
+<!-- Original:  freeware.de -->
+<!-- Web Site:  http://freeware.de -->
+<!-- MSIE Fix by:  Kurt Grigg (kurt.grigg@virgin.net) -->
+
+<!--  Begin
+if (document.layers) {
+window.captureEvents(Event.MOUSEMOVE);
+}
+var yBase = 200;
+var xBase = 200;
+var yAmpl = 10;
+var yMax = 40;
+var step = .2;
+var ystep = .5;
+var currStep = 0;
+var tAmpl=1;
+var Xpos = 1;
+var Ypos = 1;
+var i = 0;
+var j = 0;
+if (document.all) {
+function MoveHandler(){
+Xpos = document.body.scrollLeft + event.x;
+Ypos = document.body.scrollTop + event.y;
+}
+document.onmousemove = MoveHandler;
+}
+else if (document.layers) {
+function xMoveHandler(evnt) {
+Xpos = evnt.pageX;
+Ypos = evnt.pageY;
+}
+window.onMouseMove = xMoveHandler;
+}
+function animateLogo() {
+if (document.all) {
+yBase = window.document.body.offsetHeight / 4;
+xBase = window.document.body.offsetWidth / 4;
+}
+else if (document.layers) {
+yBase = window.innerHeight / 4;
+xBase = window.innerWidth / 4;
+}
+if (document.all) {
+for (i = 0 ; i < starsDiv.all.length; i++) {
+starsDiv.all[i].style.top = Ypos + Math.cos((20*Math.sin(currStep/20))+i*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+starsDiv.all[i].style.left = Xpos + Math.sin((20*Math.sin(currStep/20))+i*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+   }
+}
+else if (document.layers) {
+for (j = 0; j < 7; j++) { //7 is number of NS layers!
+var templayer="a" + j;
+document.layers[templayer].top = Ypos + Math.cos((20*Math.sin(currStep/20))+j*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+document.layers[templayer].left =Xpos + Math.sin((20*Math.sin(currStep/20))+j*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+   }
+}
+currStep += step;
+setTimeout("animateLogo()", 10);
+}
+animateLogo();
+// End -->
+</script>
+<P ALIGN="CENTER">&nbsp;
+
+<p align="center">
+
+<p align="center"><a href="http://www.banner-link.com.br/l2.asp?conta=12445&amp;nbanner=1" target="_top"><img src="http://www.banner-link.com.br/b3.asp?conta=12445&amp;nbanner=12" width="468" height="60" border="0" alt="clique aqui!"></a><br>
+
+<a href="http://www.banner-link.com.br" target="_top"><img src="http://www.banner-link.com.br/r.gif" width="468" height="16" border="0" alt="by Banner-Link"></a></p>
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER="1" CELLSPACING=1 CELLPADDING=4 WIDTH=518 height="4371">
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><B><font color="#00FFFF">Nome</font> </B></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<B><P ALIGN="CENTER"><font color="#00FFFF">R(Red)</font></B></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<B><P ALIGN="CENTER"><font color="#00FFFF">G(Green)</font></B></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<B><P ALIGN="CENTER"><font color="#00FFFF">B(Blue)</font></B></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">aliceblue (azul alice)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">antiquewhite (branco antigo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EB</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D7</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">aqua</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">aquamarine</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D4</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">azure</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">beige (bege)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DC</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">bisque</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E4</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C4</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">black (preto)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">blanchedalmond (am&ecirc;ndoa branca)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EB</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">blue (azul)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">blueviolet (violeta azulada)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8A</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E2</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">brown (marrom)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2A</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2A</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">burlywood (madeira)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">87</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">cadetblue (azul cadete)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">5F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">9E</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A0</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">chartreuse</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">chocolate</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D2</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">69</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">1E</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">coral</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">50</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">cornflowerblue (azul flor-de-milho )</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">64</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">95</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">ED</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">cornsilk (seda)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DC</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">crimson</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DC</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">14</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">3C</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">cyan (ciano)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkblue (azul escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkcyan (ciano escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkgoldenrod (dourado escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">86</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">0B</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkgray (cinza escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A9</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A9</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A9</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkgreen (verde escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">64</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkkhaki (c&aacute;qui escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">BD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B7</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">6B</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkmagenta (magenta escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkolivegreen (verde oliva escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">55</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">6B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2F</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkorange (laranja escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8C</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkorchid (orqu&iacute;dea escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">99</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">32</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CC</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkred (vermelho escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darksalmon (salm&atilde;o escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E9</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">96</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7A</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkseagreen (verde mar escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">BC</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8F</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkslateblue (azul lousa escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">48</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">3D</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkslategray verde lousa escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">4F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">4F</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkturquoise (turquesa escuro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D1</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">darkviolet (violeta escura)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">94</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D3</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">deeppink (rosa fundo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">14</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">93</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">deepskyblue (azul c&eacute;u fundo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">BF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">dimgray (cinza escurecido)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">69</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">69</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">69</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">dodgerblue (azul dodger)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">1E</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">90</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">firebrick (tijolo de fogo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B2</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">22</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">22</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">floralwhite (branco floral)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">forestgreen (verde floresta)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">22</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">22</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">fuchsia</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">gainsboro</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DC</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DC</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DC</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">ghostwhite (branco fantasma)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">gold (ouro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D7</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">goldenrod (dourado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">20</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">gray (cinza)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">green (verde)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">greenyellow (amarelo esverdeado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">AD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2F</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">honeydew (orvalho de mel)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">hotpink (rosa quente)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">69</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B4</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">indianred (vermelho indiano)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">5C</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">5C</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">indigo (&iacute;ndigo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">4B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">82</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">ivory (marfim)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">khaki (c&aacute;qui)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E6</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8C</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lavender (lavanda)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E6</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E6</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lavenderblush (rubor de lavanda)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lawngreen (verde gramado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7C</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FC</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lemonchiffon (lim&atilde;o)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightblue (azul claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">AD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E6</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightcoral (coral claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightcyan (ciano claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightgoldenrodyellow (ouro claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D2</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightgreen (verde claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">90</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">90</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightgrey (cinza claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D3</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D3</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D3</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightpink (rosa claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B6</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C1</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightsalmon (lim&atilde;o claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7A</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightseagreen (verde mar claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">20</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B2</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">AA</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="TOP" HEIGHT=19>
+<P><font color="#00FFFF">lightskyblue (azul c&eacute;u claro)</font></TD>
+<TD WIDTH="12%" VALIGN="TOP" HEIGHT=19>
+<P ALIGN="CENTER"><font color="#00FFFF">87</font></TD>
+<TD WIDTH="12%" VALIGN="TOP" HEIGHT=19>
+<P ALIGN="CENTER"><font color="#00FFFF">CE</font></TD>
+<TD WIDTH="12%" VALIGN="TOP" HEIGHT=19>
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightslategray (cinza lousa claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">77</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">88</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">99</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightsteelblue (azul a&ccedil;o claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C4</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DE</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lightyellow (amarelo claro)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E0</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">lime (lima)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">limegreen (verde lima)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">32</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">32</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">linen (linho)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E6</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">magenta</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">maroon (castanha)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumaquamarine (aquam. m&eacute;dia)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">66</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">AA</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumblue (azul m&eacute;dio)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumorchid (orqu&iacute;dea m&eacute;dia)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">BA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">55</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D3</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumpurple (p&uacute;rpura m&eacute;dia)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">93</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">70</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DB</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="TOP" HEIGHT=19>
+<P><font color="#00FFFF">mediumseagreen(verde mar m&eacute;dio)</font></TD>
+<TD WIDTH="12%" VALIGN="TOP" HEIGHT=19>
+<P ALIGN="CENTER"><font color="#00FFFF">3C</font></TD>
+<TD WIDTH="12%" VALIGN="TOP" HEIGHT=19>
+<P ALIGN="CENTER"><font color="#00FFFF">B3</font></TD>
+<TD WIDTH="12%" VALIGN="TOP" HEIGHT=19>
+<P ALIGN="CENTER"><font color="#00FFFF">71</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumslateblue (azul lousa m&eacute;dio)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">68</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumspringgreen(v. fonte medio)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">9A</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumturquoise (turquesa m&eacute;dia)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">48</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D1</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CC</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mediumvioletred(verm. viol. m&eacute;dio)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C7</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">15</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">85</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">midnightblue (azul meia-noite)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">19</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">19</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">70</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mintcream (creme)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">mistyrose (rosa nublado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E4</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E1</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">moccasin</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E4</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B5</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">navajowhite (branco navajo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">AD</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">navy (marinho)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">oldlace (la&ccedil;o velho)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E6</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">olive (oliva ou azeitona)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">olivedrab (oliva pardo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">6B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8E</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">23</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">orange (laranja)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">orangered (laranjado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">45</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">orchid (orqu&iacute;dea)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">70</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D6</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">palegoldenrod (dourado p&aacute;lido)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">AA</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">palegreen (verde p&aacute;lido)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">98</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FB</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">98</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">paleturquoise (turquesa p&aacute;lida)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">AF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">palevioletred (verm. violeta p&aacute;lido)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DB</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">70</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">93</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">papayawhip (mam&atilde;o)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D5</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">peachpuff (p&ecirc;ssego folhado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B9</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">peru</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">85</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">3F</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">pink (rosa)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CB</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">plum (ameixa)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DD</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">powderblue (azul p&oacute;)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E6</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">purple (p&uacute;rpura)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">red (vermelho)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">rosybrown (marrom rosado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">BC</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8F</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8F</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">royalblue (azul royal)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">41</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">69</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E1</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">saddlebrown (marrom sela)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">45</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">13</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">salmon (salm&atilde;o)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">72</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">sandybrown (marrom arenoso)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F4</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A4</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">60</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">seagreen (verde mar)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2E</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8B</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">57</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">seashell (concha do mar)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">sienna</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">A0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">52</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">2D</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">silver (prata)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">C0</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">skyblue (azul c&eacute;u )</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">87</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EB</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">slateblue (azul lousa)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">6A</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">5A</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">slategray (cinza lousa)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">70</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">90</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">snow (neve)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FA</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">springgreen (verde fonte)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">7F</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">steelblue (azul a&ccedil;o)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">46</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">82</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B4</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">tan (bronzeado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D2</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B4</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">8C</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">teal</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">80</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">thistle (cardo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D8</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">BF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D8</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">tomato (tomate)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">63</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">47</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">turquoise (turquesa)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">40</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">E0</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">D0</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">violet (violeta)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">82</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">EE</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">wheat (trigo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">DE</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">B3</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">white (branco)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">whitesmoke (franco fuma&ccedil;a)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">F5</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">yellow (amarelo)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">FF</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">00</font></TD>
+</TR>
+<TR><TD WIDTH="53%" VALIGN="MIDDLE" height="19">
+<P><font color="#00FFFF">yellowgreen (verde amarelado)</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">9A</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">CD</font></TD>
+<TD WIDTH="12%" VALIGN="MIDDLE" height="19">
+<P ALIGN="CENTER"><font color="#00FFFF">32</font></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<p ALIGN="CENTER">&nbsp;</p>
+</BODY>
+</HTML>
